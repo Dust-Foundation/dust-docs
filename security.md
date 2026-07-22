@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/security.png
+cover: .gitbook/assets/covers/security-v2.png
 coverY: 0
 ---
 

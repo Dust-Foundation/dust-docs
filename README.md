@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/readme.png
+cover: .gitbook/assets/covers/readme-v2.png
 coverY: 0
 ---
 

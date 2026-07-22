@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/glossary.png
+cover: .gitbook/assets/covers/glossary-v2.png
 coverY: 0
 ---
 

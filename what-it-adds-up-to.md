@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/what-it-adds-up-to.png
+cover: .gitbook/assets/covers/what-it-adds-up-to-v2.png
 coverY: 0
 ---
 

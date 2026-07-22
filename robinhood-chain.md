@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/robinhood-chain.png
+cover: .gitbook/assets/covers/robinhood-chain-v2.png
 coverY: 0
 ---
 

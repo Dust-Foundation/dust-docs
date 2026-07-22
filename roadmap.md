@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/roadmap.png
+cover: .gitbook/assets/covers/roadmap-v2.png
 coverY: 0
 ---
 

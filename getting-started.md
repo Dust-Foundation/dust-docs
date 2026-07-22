@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/getting-started.png
+cover: .gitbook/assets/covers/getting-started-v2.png
 coverY: 0
 ---
 

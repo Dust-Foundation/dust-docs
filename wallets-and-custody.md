@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/wallets-and-custody.png
+cover: .gitbook/assets/covers/wallets-and-custody-v2.png
 coverY: 0
 ---
 

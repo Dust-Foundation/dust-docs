@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/risks-and-disclosures.png
+cover: .gitbook/assets/covers/risks-and-disclosures-v2.png
 coverY: 0
 ---
 

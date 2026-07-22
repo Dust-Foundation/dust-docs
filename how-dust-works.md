@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/how-dust-works.png
+cover: .gitbook/assets/covers/how-dust-works-v2.png
 coverY: 0
 ---
 
