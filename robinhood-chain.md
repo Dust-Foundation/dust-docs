@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/robinhood-chain.png
+coverY: 0
+---
+
 # Why Robinhood Chain
 
 Dust could not have been built a year ago, and even today it can only be built in one place. This page explains the choice.

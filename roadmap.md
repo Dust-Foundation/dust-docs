@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/roadmap.png
+coverY: 0
+---
+
 # Roadmap and status
 
 This page is the honest ledger of what's built, what's in progress, and what's planned. It gets updated as things ship, and we keep the history rather than rewriting it. Sequenced by phase rather than by promised dates: in a market this young, a roadmap with confident quarter labels is a fiction, and we'd rather tell you the order things happen in and what gates each step.

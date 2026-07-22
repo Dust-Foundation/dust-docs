@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/security.png
+coverY: 0
+---
+
 # Security
 
 Security claims in crypto are cheap, so this page sticks to things that are checkable: what is enforced by code, what is verified by third parties, and what our own powers are limited to.

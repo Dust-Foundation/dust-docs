@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/fees.png
+coverY: 0
+---
+
 # Fees
 
 One fee, stated up front: Dust charges a percentage of each round-up at the moment it's swept. The current rate is shown in the app before you enable round-ups and on every sweep receipt afterward. If the rate ever changes, it changes through the same timelocked, publicly announced process as the basket, never quietly.

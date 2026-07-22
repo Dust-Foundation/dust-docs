@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/how-dust-works.png
+coverY: 0
+---
+
 # How Dust works
 
 The easiest way to understand Dust is to follow one swap all the way through.

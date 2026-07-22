@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/the-vault.png
+coverY: 0
+---
+
 # The vault
 
 The vault is where your round-ups accumulate. It is also, we suspect, the screen you'll open most, so here is exactly what it shows and how the mechanics work underneath.

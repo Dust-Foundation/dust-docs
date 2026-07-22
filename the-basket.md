@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/the-basket.png
+coverY: 0
+---
+
 # The basket
 
 Your round-ups buy a fixed basket of tokenized blue-chip stocks. This page covers what those tokens actually are, what's in the basket, and who can change it (almost nobody, slowly, in public).

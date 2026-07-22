@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/risks-and-disclosures.png
+coverY: 0
+---
+
 # Risks and disclosures
 
 Every investment product carries risk, and products this new carry kinds that older ones don't. This page lists the real ones, in plain language, ordered roughly by how much they should matter to you. Nothing here is hypothetical hand-wringing; each is a risk we actively engineer against, and none can be engineered to zero.

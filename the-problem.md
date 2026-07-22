@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/the-problem.png
+coverY: 0
+---
+
 # The problem
 
 Almost nobody in crypto invests. That sounds wrong, so let us be precise: people in crypto trade constantly, but very few accumulate anything that compounds. The average active wallet makes dozens of swaps a month and ends the year holding whatever its last trade left behind.

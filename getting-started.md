@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/getting-started.png
+coverY: 0
+---
+
 # Getting started
 
 There are two ways into Dust. Pick the one that matches you.

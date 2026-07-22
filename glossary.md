@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/glossary.png
+coverY: 0
+---
+
 # Glossary
 
 Crypto documentation has a habit of defining jargon with more jargon. These are the terms used in these docs, in plain language, with what each one means for you specifically.

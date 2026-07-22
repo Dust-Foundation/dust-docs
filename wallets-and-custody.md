@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/wallets-and-custody.png
+coverY: 0
+---
+
 # Wallets and custody
 
 This page exists because "non-custodial" is the most abused word in crypto. Here is what it means at Dust, mechanically, so you can verify it rather than trust it.

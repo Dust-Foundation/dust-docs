@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/readme.png
+coverY: 0
+---
+
 # Welcome to Dust
 
 Dust invests your spare change, onchain. You opt in once, and every swap you make gets rounded up to the nearest dollar. The difference goes into a basket of tokenized blue-chip stocks that grows quietly in the background while you trade.

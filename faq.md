@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/faq.png
+coverY: 0
+---
+
 # FAQ
 
 **Is my money held by Dust?**

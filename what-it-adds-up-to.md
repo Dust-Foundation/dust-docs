@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/covers/what-it-adds-up-to.png
+coverY: 0
+---
+
 # What it adds up to
 
 Round-ups only make sense with numbers attached, so here are three honest profiles. None of them is a projection of returns; they show what gets invested, which is the part Dust controls. What the market does to it afterward is the market's business.
