@@ -20,4 +20,4 @@ Dust is in development on Robinhood Chain, with a capped, invite-only beta as th
 
 ## The one-paragraph version for busy people
 
-Dust is non-custodial: your assets sit in a wallet only you control, and you grant Dust one narrow, revocable permission that lets it move only your round-up change, only into your basket, under a cap you set. We never hold your keys, never pool your funds, and never decide what to buy on your behalf beyond the rule you set yourself. There is no Dust token, and there are no plans for one.
+Dust is non-custodial: your assets sit in a wallet only you control, and you grant Dust one narrow, revocable permission that lets it move only your round-up change, only into your basket, under a cap you set. We never hold your keys, never pool your funds, and never decide what to buy on your behalf beyond the rule you set yourself.

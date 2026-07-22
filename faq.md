@@ -21,9 +21,6 @@ Rounding up a stablecoin amount is exact. Rounding up a volatile-token swap requ
 **What does Dust cost?**
 A percentage of each round-up, shown before you enable the feature and on every sweep. No deposit, withdrawal, or management fees, and no hidden spread. The [fees page](fees.md) has the arithmetic.
 
-**Is there a token or airdrop?**
-No, and there won't be. [Here's why](no-token.md). Anyone promising a Dust token or airdrop is running a scam.
-
 **I live in the US. Can I use Dust?**
 Stock Tokens are not offered in the US, so no, not today. This follows from the issuer's rules, not ours. If that changes, these docs will change.
 

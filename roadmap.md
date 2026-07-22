@@ -25,4 +25,4 @@ Public signup, caps lifted in stages, and the second wallet tier for MetaMask us
 
 ## What we won't build
 
-No leverage on round-ups. No token (see [the page on that](no-token.md)). No yield products that depend on a centralized counterparty; that's the exact failure that took down Donut, and "your boring stock basket quietly became someone's loan book" is not a sentence we ever want to write in a postmortem.
+No leverage on round-ups. No yield products that depend on a centralized counterparty; that's the exact failure that took down Donut, and "your boring stock basket quietly became someone's loan book" is not a sentence we ever want to write in a postmortem.

@@ -14,7 +14,6 @@
 * [Fees](fees.md)
 * [Security](security.md)
 * [Why Robinhood Chain](robinhood-chain.md)
-* [There is no Dust token](no-token.md)
 
 ## Reference
 
