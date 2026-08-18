@@ -5,29 +5,31 @@ coverY: 0
 
 # Getting started
 
-There are two ways into Dust. Pick the one that matches you.
+Dust runs on Solana. Connecting takes about a minute, and there are two paths in depending on how far you want automation to go.
 
-## If you're new to crypto wallets
+## Connect and start
 
-Sign up with your email. That's it. Behind the scenes, Dust creates a wallet that belongs to you (we can't access it, and the [custody page](wallets-and-custody.md) explains why that's true rather than just claimed). No seed phrase to write down on day one, no browser extension.
+1. Open the app and connect a Solana wallet. Phantom and Solflare both work, and most other wallets show up automatically.
+2. Build your basket: pick which stocks your spare change buys, and their weights. You can change it any time.
+3. Fund with USDC (and keep a little SOL for network fees). Trade the way you already do.
 
-1. Sign up with your email address.
-2. Turn on round-ups and pick your setting: nearest dollar, nearest 5, or a 2x multiplier. You can change this whenever.
-3. Approve the round-up permission. This is one tap, and it is the only standing permission Dust ever asks for.
-4. Fund your account with USDG and trade.
+From your first round-up onward, you'll see the vault balance move. Most people check it obsessively for two days and then forget about it, which is exactly the point.
 
-From your second swap onward, you'll see the vault balance move. Most people check it obsessively for two days and then forget about it, which is exactly the point.
+Round-ups on swaps you make inside Dust need nothing more than that: you sign each one, and the change is banked. If you'd rather have it happen everywhere, read on.
 
-## If you already use MetaMask or another wallet
+## Capture everywhere
 
-Click Connect Wallet, same as on any exchange. Round-ups work immediately for every swap you make through Dust, because the router captures the change inside the transaction you're already signing. There is no extra approval and no standing permission required for this.
+This is the part that makes Dust feel like Acorns: round up your swaps and payments made anywhere on Solana, not just in the app. You grant a capped, revocable allowance the keeper uses to collect the change, and nothing above the weekly cap you set can ever be pulled. Two ways to fund it:
 
-If you want round-ups on swaps you make outside Dust too, you have two options once they're available for your wallet: grant a periodic permission (supported natively in recent MetaMask versions), or upgrade your existing address to a smart account, which keeps your address and keys exactly as they are. Both are opt-in, both are capped, and both are revocable from inside your wallet as well as from our app. Current support status per wallet is tracked on the [roadmap](roadmap.md).
+- **From USDC.** You keep a little USDC, and you grant Dust a standard SPL delegate on that balance. When the keeper spots an outside swap, it pulls the round-up from your USDC, up to your cap. Simplest path, works today.
+- **From SOL.** For people who mostly hold SOL. Your SOL lives in a Squads smart account you own, and you give the keeper an onchain spending limit: so much SOL per week, to one place, revocable whenever. The keeper pulls the round-up in SOL and converts it. The [custody page](wallets-and-custody.md) covers both in detail.
+
+Both are opt-in, both are capped onchain, and both are revocable from your wallet as well as from our app.
 
 ## Your first five minutes, honestly
 
-A realistic first session: you sign up, set round-ups to nearest dollar, deposit 200 USDG, and make a swap for 61.30. Your vault now holds 0.70 worth of the basket, which at today's prices is a sliver of a share of a few large companies. It will look like a rounding error, because it is one. The product only makes sense over months. If you want the vault to grow faster, raise the multiplier or use the boost option to add a fixed amount on top of each round-up.
+A realistic first session: you connect Phantom, build a five-stock basket, fund with $200 of USDC, and make a swap for $61.30. Your vault now holds about $0.70 of the basket, which at today's prices is a sliver of a share of a few large companies. It will look like a rounding error, because it is one. The product only makes sense over months. If you want the vault to grow faster, raise the multiplier.
 
 ## What Dust does not ask you for
 
-No bank account. No card. No personal trading history. We do not take deposits to hold; funds go to your own wallet, and Dust's contracts only ever see the round-up amounts you authorized. If any product claiming to be Dust asks you to send funds to an address to "activate" round-ups, it is a scam. The only official links are listed in these docs.
+No bank account. No card. No personal trading history. We do not take deposits to hold. Your funds stay in your own wallet, and the program only ever moves the round-up amounts you authorized. If any product claiming to be Dust asks you to send funds to an address to "activate" round-ups, it is a scam. The only official links are listed in these docs. Solana has a particular hazard worth naming: copycat tokens with names ending in "pump" or lookalike tickers. Your basket only ever holds the verified xStocks the app lists onchain, covered on the [basket page](the-basket.md).

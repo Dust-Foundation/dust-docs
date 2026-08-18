@@ -5,28 +5,35 @@ coverY: 0
 
 # Roadmap and status
 
-This page is the honest ledger of what's built, what's in progress, and what's planned. It gets updated as things ship, and we keep the history rather than rewriting it. Sequenced by phase rather than by promised dates: in a market this young, a roadmap with confident quarter labels is a fiction, and we'd rather tell you the order things happen in and what gates each step.
+This page is the honest ledger of what's built, what's in progress, and what's planned. It gets updated as things ship, and we keep the history rather than rewriting it. It's sequenced by phase rather than by promised dates: in a market this young, a roadmap with confident quarter labels is a fiction, and we'd rather tell you the order things happen in and what gates each step.
 
-## Now: testnet
+## Done: deployed and proven on Solana mainnet
 
-Dust is being built and proven on Robinhood Chain's testnet. The core contracts (router, sweeper, vault) and the app are developed against test Stock Tokens. The gate to everything after: the full flow working end to end, plus a completed third-party audit of the contract suite.
+The Solana program is live on mainnet, and the full loop has been run with real money. A real round-up, invested through Jupiter into real xStocks, then withdrawn back out. All three ways change gets captured work end to end: round-ups on in-app swaps (funded from USDC or SOL), capture-everywhere from a USDC balance, and capture-everywhere from SOL through a Squads smart account. This is the proof that the mechanism works, not an invitation for the public yet. The gates below are what stand between here and open doors.
 
-## Next: capped beta on mainnet
+## Now: audit and hardening
 
-A deliberately small launch: invite-only, with per-user vault caps and a global cap on total protocol size. The founder's own funds go through the system for weeks before anyone else's. Caps rise gradually as the system proves itself with real money, and beta users will know the caps and the reasoning. If you want in early, the waitlist is in the app.
+The program is new Rust, so the next gate is an external professional audit, with findings resolved and the report published. Alongside it: moving the admin role and the program's upgrade authority off the deployment key and onto a multisig (or burning the upgrade authority to make the program immutable), and pointing the keeper and treasury at their production addresses. None of this is optional before other people's money is involved.
+
+## Next: capped beta
+
+A deliberately small launch: invite-only, with per-user caps and a cap on total protocol size. The founder's own funds have already gone through the live system; beta widens that to a small group, with the caps and the reasoning stated. Caps rise gradually as the system proves itself. If you want in early, the waitlist is in the app.
 
 ## Then: open launch
 
-Public signup, caps lifted in stages, and the second wallet tier for MetaMask users (automatic sweeps via granted permissions) if wallet support on the chain has matured by then; otherwise it follows as its own release.
+Public signup and caps lifted in stages, with the app and keeper hosted for reliability and a public bug bounty live from day one.
 
 ## Planned, in rough order
 
-- Round-ups on swaps that don't touch USDG, priced via onchain oracles.
+- Native SOL captured straight into your basket, without the small conversion step the current SOL path uses.
 - A boost option: add a fixed amount on top of each round-up, for people who want the background investing to run hotter.
-- Address upgrading (EIP-7702) so external wallets get the full automated experience without changing address.
-- Borrowing against your vault through the chain's lending markets, so long-term holders can access liquidity without selling.
-- Themed baskets, starting with an index-style option when a sufficiently liquid tokenized index product exists on our chain. Today none does, which is why the launch basket is individual blue chips.
-- Additional chains and issuers, once the first deployment has earned the right to be copied.
+- Round-ups on more of your activity, priced from onchain quotes.
+- Themed baskets, starting with an index-style option when a sufficiently liquid tokenized index exists on Solana.
+- Deeper Robinhood Chain support, kept in step with the Solana build for people already there.
+
+## The other chain
+
+Dust also runs on Robinhood Chain, its second home. That build stays supported and available; Solana is where the primary effort and the newest features land first. [Why Solana](solana.md) and [Why Robinhood Chain](robinhood-chain.md) explain each choice.
 
 ## What we won't build
 

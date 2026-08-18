@@ -7,38 +7,40 @@ coverY: 0
 
 Crypto documentation has a habit of defining jargon with more jargon. These are the terms used in these docs, in plain language, with what each one means for you specifically.
 
-**Round-up.** The gap between what you spent on a swap and that amount rounded up to your chosen granularity. Spend 137.42 with nearest-5 rounding and the round-up is 2.58. It's the raw material of the entire product.
+**Round-up.** The gap between what you spent on a swap and that amount rounded up to your chosen granularity. Spend $137.42 with nearest-5 rounding and the round-up is $2.58. It's the raw material of the entire product.
 
-**Sweep.** The act of collecting your round-up and buying the basket with it. In-app swaps sweep instantly inside your own transaction; automated sweeps run on a schedule and are batched to save gas.
+**Investing (the sweep).** Collecting your banked round-ups and buying your basket with them, through Jupiter. In-app round-ups get banked when you sign; automated investing runs on the keeper's schedule.
 
-**USDG.** The dollar stablecoin on Robinhood Chain, issued by Paxos. One USDG targets one dollar. Round-ups are denominated and collected in it.
+**Capture-everywhere.** Rounding up swaps and payments you make outside the Dust app, not just inside it. It uses a capped, revocable permission you grant, funded from either USDC or SOL.
 
-**Stock Token.** A token on Robinhood Chain that tracks the price of a real US stock, issued by Robinhood's issuance entity. Price exposure, settled onchain, held in your own wallet. Not a share: no voting rights, and your claim is on the issuer. The [basket page](the-basket.md) covers the difference properly.
+**USDC.** The dollar stablecoin Dust uses on Solana. One USDC targets one dollar. Round-ups are denominated in it, and it's what your basket is bought with.
 
-**Basket.** The fixed, published set of Stock Tokens (with fixed weights) that your round-ups buy. Changes only through a public, delayed process.
+**xStock.** A token on Solana that tracks the price of a real US stock, issued by Backed and held one-to-one against real shares. Price exposure, settled onchain, in your own wallet. Not a share: no voting rights, and your claim is on the issuer. The [basket page](the-basket.md) covers the difference, and the issuer's freeze/clawback power, properly.
 
-**Vault.** The contract that holds your basket purchases and tracks your position, cost basis, and history. Your assets, no lockups, withdrawable any time.
+**Basket.** The set of xStocks, with weights, that you choose for your round-ups to buy. You compose it yourself from the menu Dust lists onchain, and can change it any time.
 
-**Shares (vault shares).** The accounting units that track your slice of the vault's assets. When we say your vault "holds $83.40," it means your shares currently redeem for that much of the basket.
+**Vault.** Your account in Dust's onchain program. It holds your banked round-ups and your basket position, with cost basis and history. Your assets, no lockups, withdrawable any time.
+
+**The keeper.** The off-chain worker that does the swaps and collects capture round-ups. It holds no discretion: the program rejects any investment where your vault didn't receive what a live quote promised, so a misbehaving keeper can only make a transaction fail, never divert funds.
 
 **Self-custody.** Your assets are controlled by your keys, not held by a company on your behalf. Dust never holds user funds; the [custody page](wallets-and-custody.md) explains the mechanics rather than just asserting the word.
 
-**Smart account.** A wallet that is a program rather than just a keypair, which is what lets it enforce rules like spending caps and scoped permissions. Email signups get one automatically; MetaMask users can upgrade to one without changing address.
+**SPL delegate.** A native Solana permission to let someone move up to an approved amount from one of your token accounts. Dust uses it for USDC capture: the keeper can pull your round-ups from your USDC, capped, and you revoke it in one tap.
 
-**Session key / permission.** The single standing authorization you grant Dust's sweeper: move USDG only, into your basket only, under your cap, until you revoke it. Enforced by your own account's code, not by our good behavior.
+**Squads smart account.** A programmable account (from Squads, an audited Solana protocol) that can hold your SOL and enforce rules like spending limits. Dust uses it for SOL capture: you grant the keeper a weekly SOL limit, enforced onchain, revocable any time.
 
-**Revoke.** Cancel that permission. One tap in the app, or from your wallet directly. Takes effect immediately and needs nothing from us.
+**Spending limit.** The onchain rule on a Squads account that lets the keeper pull up to so much SOL per week, to one destination. Enforced by Squads, not by Dust's good behavior.
+
+**Revoke.** Cancel a permission, whether an SPL delegate or a Squads limit. Takes effect immediately and needs nothing from us.
+
+**Jupiter.** Solana's main swap aggregator. It routes a trade across every major DEX to find the best price. Dust buys your basket through it, and the fill is verified onchain before it counts.
 
 **Slippage.** The difference between the price you expected and the price a trade actually fills at, which grows when markets are thin. Dust sets bounds so a bad fill is rejected instead of accepted.
 
-**Gas.** The fee the blockchain charges to process a transaction, paid in ETH on Robinhood Chain. Small on an L2, but never zero; sweeps are batched to keep it a small fraction of the amount invested.
+**SOL.** Solana's native token, used to pay network fees. Fees are usually a fraction of a cent. You can also fund round-ups from SOL, converted to USDC as they're banked.
 
-**L2 (Layer 2).** A blockchain that runs on top of Ethereum, inheriting its security while being faster and cheaper. Robinhood Chain is one.
+**Program.** On Solana, an onchain program is what other chains call a smart contract. Dust is a single program that enforces every rule described in these docs.
 
-**Multisig.** A wallet requiring multiple people to approve any action. Dust's admin powers live behind one, so no single person can act alone.
+**Multisig.** An account requiring multiple approvers for any action. Dust's admin powers and the program's upgrade authority move behind one before public launch, so no single person can act alone.
 
-**Timelock.** A mandatory public delay between announcing a protocol change (basket weights, fees) and it taking effect. Its job is to make "quietly" impossible.
-
-**Sequencer.** The machine that orders transactions on an L2. Robinhood Chain's is run by Robinhood; the [chain page](robinhood-chain.md) discusses what that means.
-
-**DEX / AMM.** A decentralized exchange, and the pool-based mechanism (automated market maker) most of them use for pricing. Dust buys the basket on the chain's public Uniswap pools, at prices anyone can verify.
+**Timelock.** A mandatory public delay between announcing a protocol change and it taking effect. Its job is to make "quietly" impossible.

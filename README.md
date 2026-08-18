@@ -21,7 +21,7 @@ If you are the kind of person who reads the fine print (we like you), the pages 
 
 ## Where things stand
 
-Dust is in development on Robinhood Chain, with a capped, invite-only beta as the next public step. These docs describe the protocol as designed and, where relevant, flag what is live versus what is coming. We would rather tell you plainly what is not built yet than let you assume everything is. The [roadmap](roadmap.md) has the current status.
+Dust runs on Solana, its primary home, and also on Robinhood Chain for people already there. The Solana program is deployed to mainnet and the full loop has been run with real money: a round-up, a live swap through Jupiter into real xStocks, and a withdrawal back out. What stands between that and opening the doors is an external audit of the program and a capped, invite-only beta. These docs describe the protocol as built, and flag what is proven versus what is still gated. We would rather tell you plainly what is not ready than let you assume everything is. The [roadmap](roadmap.md) has the current status, and [Why Solana](solana.md) explains the chain choice.
 
 ## The one-paragraph version for busy people
 

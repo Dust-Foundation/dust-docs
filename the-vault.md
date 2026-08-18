@@ -9,22 +9,24 @@ The vault is where your round-ups accumulate. It is also, we suspect, the screen
 
 ## What you see
 
-Your vault shows your basket balance in dollars, the breakdown by stock, your total contributed (every round-up ever, summed), and the difference between the two, which is your gain or loss. There's also the line the whole product was built for: "You've invested $83.40 without noticing since March 14."
+Your vault shows your basket balance, the breakdown by stock, your total contributed (every round-up ever, summed), and the difference between the two, which is your gain or loss. There's also the line the whole product was built for: "You've invested $83.40 without noticing since March 14."
 
-Cost basis is tracked per sweep, so you can see every individual round-up, what it bought, and at what price. Export it any time; your accountant will want it, and we'd rather give you a clean CSV than make you scrape a block explorer.
+Cost basis is tracked per investment, so you can see every individual round-up, what it bought, and at what price. Export it any time; your accountant will want it, and we'd rather give you a clean CSV than make you scrape a block explorer.
 
 ## How it works underneath
 
-The vault is an ERC-4626-style contract. When your round-ups buy the basket, the stock tokens are deposited and you're credited shares proportional to your contribution. Shares are just accounting: they track your slice of the assets, and the assets themselves stay in the vault contract on chain, attributable to you, at all times. Your position is visible to any block explorer. Nothing about your balance lives only in our database.
+Your vault is an account in Dust's onchain program, keyed to your wallet. It holds two things: your banked round-ups (USDC waiting to be invested) and your basket position, tracked per stock with its cost basis. The stock tokens themselves are held in a program vault and attributed to you in your account, so your slice is always exactly yours and always onchain. Nothing about your balance lives only in our database. Any block explorer can read your position.
+
+The program holds nothing of its own between the moment change is banked and the moment it's invested. There is no pooled pot, no shared balance, no accounting that could drift from what the chain says.
 
 ## Withdrawing
 
 No lockups, no notice periods, no withdrawal windows. Two options:
 
 - **In kind.** The stock tokens themselves move to your wallet. You keep your market exposure and simply stop using the vault's accounting.
-- **To USDG.** The vault sells your share of the basket at market on the same pools it bought from, and you receive stablecoins. Standard slippage bounds apply, and on a thin market a very large withdrawal may execute in parts.
+- **To USDC.** Your banked round-ups come back as USDC directly. For basket positions, you move the stock tokens out and can sell them on the open market whenever you choose.
 
-Withdrawals are yours to make even if round-ups are paused, even if the sweeper is paused, and even if the Dust website is down (via the contracts directly). We treat "can the user always leave" as a hard invariant, and it's one of the specific properties our security review checks.
+Withdrawals are yours to make even if round-ups are paused, even if new investing is paused, and even if the Dust website is down (by calling the program directly). The program has no instruction that lets anyone gate a withdrawal. We treat "can the user always leave" as a hard invariant, and it's one of the specific properties the security review checks.
 
 ## One thing the vault will not do
 

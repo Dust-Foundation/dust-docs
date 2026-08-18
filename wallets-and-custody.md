@@ -9,35 +9,33 @@ This page exists because "non-custodial" is the most abused word in crypto. Here
 
 ## Who holds what
 
-Your assets sit in your own wallet: either an embedded wallet created at signup that only you control, or the external wallet you connected. Dust the company has no account that holds user funds. There is no pooled deposit contract, no omnibus wallet, no "balance" that exists in our database instead of on the chain. If Dust the company disappeared tomorrow, your tokens would still be in your wallet and withdrawable with standard tools, without our website.
+Your assets sit in your own wallet, the Phantom or Solflare account you connected. Dust the company has no account that holds user funds. There is no pooled deposit, no omnibus wallet, no "balance" that exists in our database instead of on the chain. Your banked round-ups and your basket live in a program vault that is attributable to you and withdrawable by you at any time, and the program has no power to send them anywhere but back to you. If Dust the company disappeared tomorrow, your funds would still be on Solana and withdrawable with standard tools, without our website.
 
-The three prior attempts at this product category all held customer money, and all three ended with users unable to withdraw. We built Dust so that this failure is structurally impossible rather than merely promised against.
+The prior attempts at this product category all held customer money, and all ended with users unable to withdraw. We built Dust so that this failure is structurally impossible rather than merely promised against.
 
 ## The one permission Dust asks for
 
-Automation needs authority, so we ask for the smallest one that works. When you enable automatic round-ups, your wallet grants the DustSweeper contract a scoped session permission:
+Automation needs authority, so we ask for the smallest one that works. Round-ups on swaps you make inside the app need no standing permission at all, you sign each one. The standing permission only comes in when you turn on capture-everywhere for outside swaps, and it is scoped hard:
 
 | The permission can | The permission cannot |
 |---|---|
-| Move USDG from your account | Touch any other token you hold |
-| Send it only into basket purchases credited to your vault | Send funds to any other address |
-| Spend up to the per-period cap you set | Exceed the cap, ever, for any reason |
+| Pull your round-up change | Touch your other tokens |
+| Send it only into your own vault | Send funds to any other address |
+| Spend up to the weekly cap you set | Exceed that cap, ever, for any reason |
 | Act until you revoke it | Survive revocation |
 
-These limits are not policies we follow. They are constraints enforced by your own account's code: if our backend tried to exceed them, the transaction would fail on chain the same way a wrong password fails. This is worth sitting with for a second, because it is the entire trust model. You are not trusting Dust's honesty; you are trusting a rule your own wallet enforces, which you can read and revoke.
+These limits are not policies we follow. They are enforced by Solana itself and, in the SOL case, by Squads' audited program. If our keeper tried to exceed them, the transaction would fail on chain the same way a wrong password fails. This is worth sitting with, because it is the entire trust model. You are not trusting Dust's honesty. You are trusting a rule the chain enforces, which you can read and revoke.
 
-Revocation is one tap in the app, and for external wallets it also works from the wallet's own interface, so you never depend on our site being up to turn us off.
+## Two ways to fund capture-everywhere
 
-## Embedded wallets
+**From USDC, with an SPL delegate.** You grant Dust's keeper a delegate on your USDC account: a native Solana permission to move up to an approved amount from that one account. The keeper pulls your round-up from it, and the program independently checks the pull against your weekly cap on every single one. Revoke it in one tap, from the app or your wallet.
 
-If you signed up with email, your wallet is an ERC-4337 smart account, with the signing key secured by our wallet infrastructure provider and controlled through your login. You can export your key at any time and take the account to another interface. Recovery works through your email login rather than a seed phrase. There is a real trade-off here: it's dramatically easier, and it means your account security is only as good as your email security. Turn on two-factor authentication for the email you use.
+**From SOL, with a Squads spending limit.** Native SOL cannot be delegated the way a token can, so for SOL the seamless path uses a smart account. Your SOL lives in a Squads smart account you alone own, and you grant the keeper a spending limit: up to so much SOL per week, to one destination, revocable any time. The limit is enforced onchain by Squads, an audited protocol that a large share of Solana treasuries already rely on. Dust adds no custody of its own on top of it. When the keeper sees an outside swap, it pulls the round-up in SOL within that limit, converts it to USDC, and credits your vault. It can only ever add to your vault, never take from it.
 
-## External wallets
+## New to wallets
 
-MetaMask and similar wallets work in three tiers, and you choose how deep to go:
+If you have never held a Solana wallet, Phantom is the common starting point: install it, and it creates an account only you control. Write down its recovery phrase and keep it somewhere safe, because whoever has that phrase has the account. Fund it with a little USDC to invest and a little SOL for fees, and you are ready. Dust never sees your recovery phrase and cannot recover it for you, which is the price of nobody else being able to touch your funds either.
 
-1. Connect and swap. Works today, no standing permission at all. Round-ups happen only on swaps made through Dust, captured inside the transaction you sign.
-2. Grant a periodic permission (ERC-7715, in recent MetaMask releases). One signature, and Dust can sweep your accrued round-ups on a schedule, within the cap. Managed and revocable from MetaMask itself.
-3. Upgrade your address to a smart account (EIP-7702). Same address, same keys, full automation, batched approvals. For power users; entirely optional.
+## Trying it before you trust it
 
-Nothing about tier 1 requires trusting Dust with anything beyond the single transaction in front of you, which makes it a reasonable way to try the product before granting any standing permission. We'd suggest exactly that.
+You do not have to grant any standing permission to use Dust. Connect, build a basket, and round up your in-app swaps by signing each one. Nothing there trusts Dust with anything beyond the single transaction in front of you. It is a reasonable way to see the product work before you turn on capture-everywhere, and we would suggest exactly that.
