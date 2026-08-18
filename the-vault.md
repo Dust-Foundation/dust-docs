@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/the-vault-v2.png
+cover: .gitbook/assets/covers/the-vault-v3.png
 coverY: 0
 ---
 

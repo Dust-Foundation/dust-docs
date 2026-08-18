@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/the-basket-v2.png
+cover: .gitbook/assets/covers/the-basket-v3.png
 coverY: 0
 ---
 

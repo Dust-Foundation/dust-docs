@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/covers/faq-v2.png
+cover: .gitbook/assets/covers/faq-v3.png
 coverY: 0
 ---
 
