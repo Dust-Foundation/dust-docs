@@ -5,7 +5,7 @@ coverY: 0
 
 # Getting started
 
-Dust runs on Robinhood Chain. Connecting takes about a minute, and there are two paths in depending on how far you want automation to go.
+Dust runs on Robinhood Chain. Connecting takes about a minute, and there are two paths in depending on how far you want automation to go. This page is the short version; [How to use Dust](how-to-use.md) walks through every screen and every transaction.
 
 ## Connect and start
 

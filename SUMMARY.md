@@ -4,6 +4,7 @@
 * [The problem](the-problem.md)
 * [How Dust works](how-dust-works.md)
 * [Getting started](getting-started.md)
+* [How to use Dust](how-to-use.md)
 * [What it adds up to](what-it-adds-up-to.md)
 
 ## The details
