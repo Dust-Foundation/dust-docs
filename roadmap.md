@@ -9,7 +9,7 @@ This page is the honest ledger of what's built, what's in progress, and what's p
 
 ## Done: deployed on Robinhood Chain mainnet
 
-The four Dust contracts are deployed on Robinhood Chain mainnet, the keeper runs on production infrastructure, and the full loop has been verified against live mainnet state: a round-up on a USDG swap, a sweep into Stock Tokens at the quoted price from the live Uniswap v3 pools, and a withdrawal back out. The launch menu is TSLA, NVDA, AAPL, AMZN, and SPY. Capture Everywhere is live for round-ups funded from USDG. The WETH and ETH float funding paths are built, tested, and deploying (status: deploying). This is the proof that the mechanism works, not an invitation for the public yet. The gates below are what stand between here and open doors.
+The four Dust contracts are deployed on Robinhood Chain mainnet, the keeper runs on production infrastructure, and the full loop has been verified against live mainnet state: a round-up on a USDG swap, a sweep into Stock Tokens at the quoted price from the live Uniswap v3 pools, and a withdrawal back out. The launch menu is TSLA, NVDA, AAPL, AMZN, and SPY. Capture Everywhere is live for round-ups funded from USDG. WETH and ETH float funding are live too, and the first ETH-funded round-up has been captured and swept into Stock Tokens on mainnet. This is the proof that the mechanism works, not an invitation for the public yet. The gates below are what stand between here and open doors.
 
 ## Done: deployed on Solana mainnet
 

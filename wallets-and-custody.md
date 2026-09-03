@@ -30,9 +30,9 @@ These limits are not policies we follow. They are enforced by the Capture contra
 
 **From USDG, with a token allowance.** You grant the Capture contract a standard ERC-20 allowance on your USDG: a native permission to move up to an approved amount from your wallet. The keeper pulls your round-up from it straight into your vault, and the contract independently checks every pull against your weekly cap. Your allowance is a second cap you control from any wallet interface. Revoke it in one tap, from the app or your wallet. This path is live.
 
-**From WETH, with a token allowance.** For people who mostly hold ETH. You grant the same kind of allowance on your wrapped ETH. When the keeper sees an outside transaction, the Capture contract swaps exactly the round-up's worth of WETH into USDG on one fixed Uniswap v3 pool and credits your vault. The contract refuses any price worse than the pool's 10-minute average plus 2 percent, so a misbehaving keeper cannot overpay with your ETH. Built and deploying (status: deploying).
+**From WETH, with a token allowance.** For people who mostly hold ETH. You grant the same kind of allowance on your wrapped ETH. When the keeper sees an outside transaction, the Capture contract swaps exactly the round-up's worth of WETH into USDG on one fixed Uniswap v3 pool and credits your vault. The contract refuses any price worse than the pool's 10-minute average plus 2 percent, so a misbehaving keeper cannot overpay with your ETH.
 
-**From an ETH float.** If you would rather not hold wrapped ETH, park a small amount of plain ETH in the Capture contract. It is credited to you, only you, and you can withdraw it at any time, whether your cap is on or off. The keeper draws round-ups from it under the same price guard as the WETH path. Built and deploying (status: deploying).
+**From an ETH float.** If you would rather not hold wrapped ETH, park a small amount of plain ETH in the Capture contract. It is credited to you, only you, and you can withdraw it at any time, whether your cap is on or off. The keeper draws round-ups from it under the same price guard as the WETH path.
 
 Whichever you use, the weekly cap counts every source together, and it can only ever add to your vault, never take from it. Set the cap to zero and Capture Everywhere is fully off.
 
