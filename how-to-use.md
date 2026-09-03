@@ -26,7 +26,7 @@ Dust is not yet open to the public. The steps below describe the app as built, a
 
 ## Step 1: connect
 
-Open the app. The chain switcher at the top right shows Robinhood first; that is the default, so you should not have to touch it. Click **Connect wallet** and approve the connection in your wallet.
+Open the app at https://app.roundupdust.com. That is the only official address; bookmark it rather than following links from posts or messages. The chain switcher at the top right shows Robinhood first; that is the default, so you should not have to touch it. Click **Connect wallet** and approve the connection in your wallet.
 
 If your wallet is on another network, the app shows a **Switch to Robinhood Chain** button. Click it and approve the switch. Until you do, the app cannot read your balances, so nothing else appears.
 

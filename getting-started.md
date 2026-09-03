@@ -9,7 +9,7 @@ Dust runs on Robinhood Chain. Connecting takes about a minute, and there are two
 
 ## Connect and start
 
-1. Open the app and connect an EVM wallet. MetaMask works, and so does any wallet that can add a custom network. The app offers to add Robinhood Chain for you.
+1. Open the app at https://app.roundupdust.com and connect an EVM wallet. MetaMask works, and so does any wallet that can add a custom network. The app offers to add Robinhood Chain for you.
 2. Build your basket: pick which Stock Tokens your spare change buys, and their weights. The launch menu is TSLA, NVDA, AAPL, AMZN, and SPY. You can change your basket any time.
 3. Fund with USDG (and keep a little ETH for network fees). Trade the way you already do.
 
@@ -35,4 +35,4 @@ A realistic first session: you connect MetaMask, build a five-stock basket, fund
 
 ## What Dust does not ask you for
 
-No bank account. No card. No personal trading history. We do not take deposits to hold. Your funds stay in your own wallet, and the contracts only ever move the round-up amounts you authorized. If any product claiming to be Dust asks you to send funds to an address to "activate" round-ups, it is a scam. The only official links are listed in these docs. Lookalike tokens exist on every chain, and Robinhood Chain is no exception: a token with the right name and the wrong address is not a Stock Token. Your basket only ever holds the Stock Token contracts Dust has listed onchain, covered on the [basket page](the-basket.md).
+No bank account. No card. No personal trading history. We do not take deposits to hold. Your funds stay in your own wallet, and the contracts only ever move the round-up amounts you authorized. If any product claiming to be Dust asks you to send funds to an address to "activate" round-ups, it is a scam. The only official app address is https://app.roundupdust.com, and the only official links are listed in these docs. Lookalike tokens exist on every chain, and Robinhood Chain is no exception: a token with the right name and the wrong address is not a Stock Token. Your basket only ever holds the Stock Token contracts Dust has listed onchain, covered on the [basket page](the-basket.md).
