@@ -21,7 +21,7 @@ Any time, instantly, from the app or from your wallet directly. Your vault keeps
 You own Stock Tokens that track the price. Not shares, no voting rights, and your claim is on the issuer, which can also pause the token or block an address. The [basket page](the-basket.md) explains all of that without marketing gloss, because it matters. On Solana the equivalent is an xStock, issued by Backed.
 
 **Can I round up if I only hold ETH, not USDG?**
-Swaps inside the app are USDG swaps, so those round-ups come from USDG. For capturing outside activity, Capture Everywhere can be funded from USDG today, and from WETH or a small ETH float you park in the Capture contract; those two paths are built and deploying. The [custody page](wallets-and-custody.md) has the details. On Solana, round-ups can be funded from SOL as well as USDC.
+Swaps inside the app are USDG swaps, so those round-ups come from USDG. For capturing outside activity, Capture Everywhere can be funded from USDG, from WETH, or from a small ETH float you park in the Capture contract. All three are live. The [custody page](wallets-and-custody.md) has the details. On Solana, round-ups can be funded from SOL as well as USDC.
 
 **What happens if an investment fails?**
 Nothing bad. Each leg either completes or doesn't happen. A failed leg (thin pool, a stale quote, a Stock Token its issuer has paused) is skipped and its USDG goes back to your accrued balance, to be retried on a later pass. Your round-up sits in your own vault in the meantime, not in limbo, and you can withdraw it whenever.
