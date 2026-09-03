@@ -23,7 +23,7 @@ Read those three stories again and notice what they share. Every one of them was
 
 ## Why it's buildable now
 
-Two things changed. First, real assets arrived onchain: tokenized blue-chip stocks now trade 24/7 against stablecoins on public blockchains, with self-custody. Second, wallets became programmable. A modern smart account can grant an app a narrow, standing permission ("you may move my round-up change, only into my basket, up to this cap, and I can revoke you anytime") without ever handing over keys or funds. In 2021 that primitive did not exist in any usable form. In 2026 it is production infrastructure.
+Two things changed. First, real assets arrived onchain: blue-chip stocks now trade as tokens, 24/7 against stablecoins on public blockchains, with self-custody. Second, wallets became programmable. A modern smart account can grant an app a narrow, standing permission ("you may move my round-up change, only into my basket, up to this cap, and I can revoke you anytime") without ever handing over keys or funds. In 2021 that primitive did not exist in any usable form. In 2026 it is production infrastructure.
 
 Put those together and the Acorns model finally works without the fatal ingredient. No company holds your money. The rules are enforced by your own wallet and by contracts anyone can read. Dust is that product.
 

@@ -13,8 +13,8 @@
 * [The vault](the-vault.md)
 * [Fees](fees.md)
 * [Security](security.md)
-* [Why Solana](solana.md)
 * [Why Robinhood Chain](robinhood-chain.md)
+* [Also on Solana](solana.md)
 
 ## Reference
 
