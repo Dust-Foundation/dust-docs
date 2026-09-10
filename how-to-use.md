@@ -36,7 +36,7 @@ Nothing has been signed onchain yet. Connecting only tells the app which address
 
 The first thing Dust asks is what your spare change should buy. This is yours to decide. Nobody at Dust picks stocks for you, and the contract that does the buying is written so that nobody at Dust can change your choice later.
 
-You see the menu of Stock Tokens available on Robinhood Chain. At launch it is five: TSLA, NVDA, AAPL, AMZN, and SPY. Each row has a percentage. Set them any way you like as long as they add up to 100 percent. **Split evenly** does 20 percent each. You can leave a token at zero if you do not want it.
+You see the menu of Stock Tokens available on Robinhood Chain. Fifteen today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX and MSTR. Each row has a percentage. Set them any way you like as long as they add up to 100 percent. **Split evenly** does 20 percent each. You can leave a token at zero if you do not want it.
 
 Click **Save basket**. Your wallet asks you to sign one transaction. It records your basket in the DustSweeper contract under your address, and it is the only way a basket is ever set. It costs a fraction of a cent in ETH.
 

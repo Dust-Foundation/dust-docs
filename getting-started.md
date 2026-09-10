@@ -10,7 +10,7 @@ Dust runs on Robinhood Chain. Connecting takes about a minute, and there are two
 ## Connect and start
 
 1. Open the app at https://app.roundupdust.com and connect an EVM wallet. MetaMask works, and so does any wallet that can add a custom network. The app offers to add Robinhood Chain for you.
-2. Build your basket: pick which Stock Tokens your spare change buys, and their weights. The launch menu is TSLA, NVDA, AAPL, AMZN, and SPY. You can change your basket any time.
+2. Build your basket: pick which Stock Tokens your spare change buys, and their weights. The menu is fifteen Stock Tokens: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX and MSTR. You can change your basket any time.
 3. Fund with USDG (and keep a little ETH for network fees). Trade the way you already do.
 
 From your first round-up onward, you'll see the vault balance move. Most people check it obsessively for two days and then forget about it, which is exactly the point.
