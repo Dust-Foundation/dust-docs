@@ -17,7 +17,7 @@ The Solana program is live on mainnet, and the full loop has been run with real 
 
 ## Now: audit and hardening
 
-The Robinhood Chain contracts were audited by CredShields, with the report delivered on September 11, 2026: twelve findings, none critical, one high. Every finding was addressed in a new version of the four contracts, deployed the same day, with a test for each that replays the auditor's scenario. The re-review is in progress, and the full report, findings and fixes side by side, is published once it lands. The Solana program still needs its own external audit. Alongside it: moving ownership of the sweeper and the treasury address onto a multisig on Robinhood Chain, and moving the admin role and upgrade authority onto a multisig (or burning the upgrade authority) on Solana. None of this is optional before other people's money is involved.
+The Robinhood Chain contracts went through an external audit, with the report delivered on September 11, 2026: twelve findings, none critical, one high. Every finding was addressed in a new version of the four contracts, deployed the same day, with a test for each that replays the auditor's scenario. The re-review is in progress, and the full report, findings and fixes side by side, is published once it lands. The Solana program still needs its own external audit. Alongside it: moving ownership of the sweeper and the treasury address onto a multisig on Robinhood Chain, and moving the admin role and upgrade authority onto a multisig (or burning the upgrade authority) on Solana. None of this is optional before other people's money is involved.
 
 ## Next: capped beta
 
