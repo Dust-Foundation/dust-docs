@@ -25,6 +25,8 @@ If you are the kind of person who reads the fine print (we like you), the pages 
 
 Dust runs on Robinhood Chain, its home, and is also available on Solana. On Robinhood Chain the contracts are deployed on mainnet, the keeper runs on production infrastructure, and the full loop has been verified against live mainnet state: a round-up, a sweep into Stock Tokens at the quoted price, and a withdrawal back out. On Solana the program is deployed to mainnet and the same loop has been run with real money, through Jupiter into xStocks and back. The Robinhood Chain contracts have been audited by [CredShields](https://credshields.com) (twelve findings, none critical, all fixed and re-verified; [full report](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf)). What stands between that and opening the doors is a capped, invite-only beta on Robinhood Chain, and on Solana the program's own audit. These docs describe the protocol as built, and flag what is proven versus what is still gated. We would rather tell you plainly what is not ready than let you assume everything is. The [roadmap](roadmap.md) has the current status.
 
+![Contracts audited by CredShields](.gitbook/assets/credshields-audit-badge.png)
+
 ## The one-paragraph version for busy people
 
 Dust is non-custodial: your assets sit in a wallet only you control, and you grant Dust one narrow, revocable permission that lets it move only your round-up change, only into your own vault position, under a weekly cap you set. We never hold your keys, never pool your funds, and never decide what to buy on your behalf beyond the rule you set yourself.

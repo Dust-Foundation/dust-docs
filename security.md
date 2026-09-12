@@ -13,6 +13,8 @@ The most important security property of Dust is the one described in [Wallets an
 
 ## Audits and review
 
+![Contracts audited by CredShields](.gitbook/assets/credshields-audit-badge.png)
+
 The Robinhood Chain contracts were audited by [CredShields](https://credshields.com) in September 2026. Twelve findings, none critical; every one was fixed in a new version of the contracts, deployed on September 11, and CredShields re-reviewed and marked each fixed on September 12. The report is published in full, findings and fixes included, not summarized into a badge: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). The Capture Everywhere funding paths for WETH and ETH were in scope. The Solana program is separate new code in Rust and has not been audited yet; it stays pre-public until it is.
 
 A public bug bounty runs from public launch, with payouts scaled to severity and to the value the protocol holds. Details and scope live on the bounty page linked in the app.
