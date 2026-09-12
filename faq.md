@@ -40,3 +40,7 @@ You can. Do you? The product isn't for the disciplined version of you that logs 
 
 **What's the minimum to start?**
 There isn't one. The first round-up can be 30 cents. That's rather the point.
+
+## Has Dust been audited?
+
+Yes. CredShields audited the Robinhood Chain contracts in September 2026. They found twelve issues, none critical, one high. We fixed every one in a new version of the contracts, deployed on September 11, and CredShields re-reviewed and marked each fixed on September 12. The report is public in full: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). If you used Dust before September 11, the app shows a card to withdraw from the old contracts and set up again on the new ones. The Solana program has not been audited yet.
