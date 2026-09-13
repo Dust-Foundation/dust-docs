@@ -7,6 +7,10 @@
 * [How to use Dust](how-to-use.md)
 * [What it adds up to](what-it-adds-up-to.md)
 
+## Race to Roundup
+
+* [Race to Roundup](race-to-roundup.md)
+
 ## The details
 
 * [Wallets and custody](wallets-and-custody.md)
