@@ -1,6 +1,6 @@
 # How to use Dust
 
-This is the long version of [Getting started](getting-started.md): every screen, every transaction you will be asked to sign, what each one does onchain, and what to expect afterwards. It describes Dust on Robinhood Chain, which is where Dust lives. If you are on Solana, the flow is close but the details differ, and [Also on Solana](solana.md) covers them.
+This is the long version of [Getting started](getting-started.md): every screen, every transaction you will be asked to sign, what each one does onchain, and what to expect afterwards. It describes Dust on Robinhood Chain, which is where Dust lives. If you are on Solana, the flow is close but the details differ, and [Also on Solana](solana.md) covers them. On Arc the flow is this one exactly, with two differences: the basket holds cirBTC rather than Stock Tokens for now, and Capture Everywhere is funded from USDC only. [Also on Arc](arc.md) has the specifics.
 
 Nothing here requires trusting us with your money. Every step is a transaction from your own wallet, and every permission you grant is capped and revocable. If a step ever asks you to send funds to an address to "activate" something, close the tab. That is not Dust.
 

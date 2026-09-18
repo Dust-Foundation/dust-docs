@@ -5,11 +5,11 @@ coverY: 0
 
 # Getting started
 
-Dust runs on Robinhood Chain. Connecting takes about a minute, and there are two paths in depending on how far you want automation to go. This page is the short version; [How to use Dust](how-to-use.md) walks through every screen and every transaction.
+Dust runs on Robinhood Chain, and also on Arc and Solana. Connecting takes about a minute, and there are two paths in depending on how far you want automation to go. This page is the short version; [How to use Dust](how-to-use.md) walks through every screen and every transaction.
 
 ## Connect and start
 
-1. Open the app at https://app.roundupdust.com and connect an EVM wallet. MetaMask works, and so does any wallet that can add a custom network. The app offers to add Robinhood Chain for you.
+1. Open the app at https://app.roundupdust.com and connect an EVM wallet. MetaMask works, and so does any wallet that can add a custom network. The app offers to add Robinhood Chain for you. To use Dust on Arc instead, pick Arc in the switcher at the top right; the app adds that network the same way, and gas there is paid in USDC, so you never need ETH.
 2. Build your basket: pick which Stock Tokens your spare change buys, and their weights. The menu is fifteen Stock Tokens: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX and MSTR. You can change your basket any time.
 3. Fund with USDG (and keep a little ETH for network fees). Trade the way you already do.
 
@@ -27,7 +27,7 @@ This is the part that makes Dust feel like Acorns: round up your swaps and payme
 
 The weekly cap applies across all three together. All are opt-in, all are capped onchain, and all are revocable from your wallet as well as from our app. Setting your cap to zero is a full opt-out.
 
-On Solana the same feature is funded from USDC through a token delegate, or from SOL through a Squads smart account. [Also on Solana](solana.md) covers it.
+On Solana the same feature is funded from USDC through a token delegate, or from SOL through a Squads smart account. [Also on Solana](solana.md) covers it. On Arc it is funded from USDC alone, and every payment you make in USDC rounds up, not just swaps. [Also on Arc](arc.md) covers it.
 
 ## Your first five minutes, honestly
 

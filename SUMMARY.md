@@ -20,6 +20,7 @@
 * [Security](security.md)
 * [Why Robinhood Chain](robinhood-chain.md)
 * [Also on Solana](solana.md)
+* [Also on Arc](arc.md)
 
 ## Reference
 

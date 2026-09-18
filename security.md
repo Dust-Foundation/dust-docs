@@ -15,13 +15,13 @@ The most important security property of Dust is the one described in [Wallets an
 
 ![Contracts audited by CredShields](.gitbook/assets/credshields-audit-badge.png)
 
-The Robinhood Chain contracts were audited by [CredShields](https://credshields.com) in September 2026. Twelve findings, none critical; every one was fixed in a new version of the contracts, deployed on September 11, and CredShields re-reviewed and marked each fixed on September 12. The report is published in full, findings and fixes included, not summarized into a badge: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). The Capture Everywhere funding paths for WETH and ETH were in scope. The Solana program is separate new code in Rust and has not been audited yet; it stays pre-public until it is.
+The Robinhood Chain contracts were audited by [CredShields](https://credshields.com) in September 2026. Twelve findings, none critical; every one was fixed in a new version of the contracts, deployed on September 11, and CredShields re-reviewed and marked each fixed on September 12. The report is published in full, findings and fixes included, not summarized into a badge: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). The Capture Everywhere funding paths for WETH and ETH were in scope. The Arc deployment (September 18, 2026) is this same audited bytecode with no changes, at these addresses on Arc: vault `0x572557F8f96cbd1DB0560fE36bFdD674bC28493F`, router `0x3E83593D9D3f0F29410209070688AD2eA38b0d16`, sweeper `0xa14a1fC162b5B54402ec234EAE884258E4940492`, capture `0x7dFC4707017967b30c93D4dB69FA928852e7E825`. The Solana program is separate new code in Rust and has not been audited yet; it stays pre-public until it is.
 
 A public bug bounty runs from public launch, with payouts scaled to severity and to the value the protocol holds. Details and scope live on the bounty page linked in the app.
 
 ## Admin powers, enumerated
 
-Here is everything the Dust team can do to the live protocol on Robinhood Chain, in total. All of it lives in the sweeper contract:
+Here is everything the Dust team can do to the live protocol on Robinhood Chain and on Arc, in total. All of it lives in the sweeper contract:
 
 - Curate the Stock Token menu: list or delist which Stock Tokens users can choose from. This never touches an existing user's holdings. A delisted token is simply skipped in future sweeps, and anything you already hold in it stays withdrawable.
 - Change the fee rate: within the 5% ceiling fixed in the contract's code, visible onchain.

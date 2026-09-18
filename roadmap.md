@@ -15,9 +15,13 @@ The four Dust contracts are deployed on Robinhood Chain mainnet, the keeper runs
 
 The Solana program is live on mainnet, and the full loop has been run with real money: a real round-up, invested through Jupiter into real xStocks, then withdrawn back out. All three ways change gets captured work end to end there: round-ups on in-app swaps (funded from USDC or SOL), Capture Everywhere from a USDC balance, and Capture Everywhere from SOL through a Squads smart account. [Also on Solana](solana.md) explains the deployment.
 
+## Done: deployed on Arc mainnet
+
+September 18, 2026, two days after Circle opened Arc. The same four audited contracts, byte for byte, with a keeper running on production infrastructure. The loop was verified against live Arc state before deploy: a USDC round-up captured, swept into cirBTC at the pinned price, withdrawn. cirBTC is the only asset listed because it is the only one on Arc with real liquidity today; more get listed as they arrive. [Also on Arc](arc.md) explains the deployment.
+
 ## Now: audit and hardening
 
-The Robinhood Chain contracts were audited by [CredShields](https://credshields.com), with the report delivered on September 11, 2026: twelve findings, none critical, one high. Every finding was addressed in a new version of the four contracts, deployed the same day, with a test for each that replays the auditor's scenario, and CredShields re-reviewed and marked every finding fixed. The full report is public: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). The Solana program still needs its own external audit. Alongside it: moving ownership of the sweeper and the treasury address onto a multisig on Robinhood Chain, and moving the admin role and upgrade authority onto a multisig (or burning the upgrade authority) on Solana. None of this is optional before other people's money is involved.
+The Robinhood Chain contracts were audited by [CredShields](https://credshields.com), with the report delivered on September 11, 2026: twelve findings, none critical, one high. Every finding was addressed in a new version of the four contracts, deployed the same day, with a test for each that replays the auditor's scenario, and CredShields re-reviewed and marked every finding fixed. The full report is public: [Audit_Report_Dust.pdf](https://github.com/Credshields/audit-reports/blob/master/Audit_Report_Dust.pdf). The Arc deployment reuses that exact bytecode, so it is covered. The Solana program still needs its own external audit. Alongside it: moving ownership of the sweeper and the treasury address onto a multisig on Robinhood Chain and on Arc, and moving the admin role and upgrade authority onto a multisig (or burning the upgrade authority) on Solana. None of this is optional before other people's money is involved.
 
 ## Next: capped beta
 
