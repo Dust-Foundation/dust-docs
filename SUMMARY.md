@@ -21,6 +21,7 @@
 * [Why Robinhood Chain](robinhood-chain.md)
 * [Also on Solana](solana.md)
 * [Also on Arc](arc.md)
+* [Also on Base](base.md)
 
 ## Reference
 

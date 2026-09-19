@@ -9,7 +9,7 @@ coverY: 0
 No. Assets stay in your own wallet and your vault position. Dust holds one narrow permission, and only if you turn on Capture Everywhere: pulling your round-up change under a weekly cap, into your own vault position. You revoke it in one tap. If Dust vanished, you could withdraw everything without us.
 
 **Which chain does Dust run on?**
-Robinhood Chain is home, and these docs describe that version first. Dust is also deployed on Solana and on Arc, Circle's USDC-native chain; [Also on Solana](solana.md) and [Also on Arc](arc.md) explain what differs on each. You switch chains in the app.
+Robinhood Chain is home, and these docs describe that version first. Dust is also deployed on Solana, on Arc, Circle's USDC-native chain, and on Base, where it buys Coinbase's tokenized stocks through Aerodrome; [Also on Solana](solana.md), [Also on Arc](arc.md) and [Also on Base](base.md) explain what differs on each. You switch chains in the app.
 
 **How big are round-ups, really?**
 As big as your trading. Someone who makes 40 swaps a month at nearest-dollar rounding invests roughly $20 a month on average; a 2x multiplier doubles that. It's meant to be small enough that you never feel it and steady enough that it adds up. The app shows your monthly run rate after a couple of weeks.
@@ -33,7 +33,7 @@ A percentage of each round-up, 1% at launch, taken only when it's actually inves
 Stock Tokens are not offered in the US, and neither are xStocks, so no, not today. This follows from the issuers' rules, not ours. If that changes, these docs will change.
 
 **Is it safe? Has it been audited?**
-Yes. The Robinhood Chain contracts were audited by CredShields in September 2026, every finding was fixed, and CredShields re-reviewed and confirmed the fixes. The full report is public. Details are in [Has Dust been audited?](#has-dust-been-audited) below and on the [security page](security.md). The Arc deployment is the same audited code, byte for byte. The Solana program has not been audited yet, which is why it stays pre-public.
+Yes. The Robinhood Chain contracts were audited by CredShields in September 2026, every finding was fixed, and CredShields re-reviewed and confirmed the fixes. The full report is public. Details are in [Has Dust been audited?](#has-dust-been-audited) below and on the [security page](security.md). The Arc and Base deployments are the same audited code, byte for byte; Base adds one small adapter contract in front of Aerodrome. The Solana program has not been audited yet, which is why it stays pre-public.
 
 **Why would a trader want this? I can already buy stocks.**
 You can. Do you? The product isn't for the disciplined version of you that logs into a brokerage every month. It's for the actual you, mid-trade at 2 a.m. The honest pitch is that Dust converts behavior you already exhibit into investing you already know you should do.
