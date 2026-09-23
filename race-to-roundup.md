@@ -1,8 +1,10 @@
 # Race to Roundup
 
-Ten days. Every round-up you make on Robinhood Chain scores points. $5,000 in rewards, split by share of points.
+Three weeks. Every round-up you make on Robinhood Chain scores points. $5,000 in rewards, split by share of points.
 
-Runs from September 14 to September 23, 2026, UTC. The leaderboard lives in the app.
+Runs from September 14 to October 4, 2026, UTC. The leaderboard lives in the app.
+
+**Update, September 23:** the race was planned as ten days ending September 23. It now runs through October 4. Points already scored carry over, the daily cap and the holding rule are unchanged, and the top multiplier tier now needs 14 active days instead of all of them.
 
 ## Who can take part
 
@@ -22,11 +24,11 @@ That's it. No sign-up form, no KYC, no minimum deposit beyond the round-ups them
 
 ## Showing up counts
 
-An active day is any day with at least one scoring round-up. Your total gets multiplied by how many of the ten days you were active.
+An active day is any day with at least one scoring round-up. Your total gets multiplied by how many days you were active.
 
 * Fewer than 7 active days: 1.0x
-* 7 to 9 active days: 1.25x
-* All 10 days: 1.5x
+* 7 to 13 active days: 1.25x
+* 14 or more active days: 1.5x
 
 ## Referrals
 
@@ -39,7 +41,7 @@ Share your referral link from the app. Anyone who joins through it becomes your 
 
 ## Rewards
 
-$5,000 in rewards, split in proportion to points. Your share is your points divided by everyone's points. Payouts go out after the final check on September 23, once the scores have been verified.
+$5,000 in rewards, split in proportion to points. Your share is your points divided by everyone's points. Payouts go out after the final check on October 4, once the scores have been verified.
 
 ## The fine print
 
