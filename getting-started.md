@@ -19,7 +19,9 @@ Round-ups on swaps you make inside Dust need nothing more than that: you sign ea
 
 ## Capture Everywhere
 
-This is the part that makes Dust feel like Acorns: round up your swaps and payments made anywhere on Robinhood Chain, not just in the app. You set a weekly cap, the keeper collects the change under it, and nothing above that cap can ever be pulled. Three ways to fund it:
+In the app this is the **Round-ups** tab.
+
+This is the part that makes Dust feel like Acorns: round up your swaps and payments made anywhere on Robinhood Chain, not just in the app. You set a weekly limit, the keeper collects the change under it, and nothing above that cap can ever be pulled. Three ways to fund it:
 
 - **From USDG.** You keep a little USDG and grant the Capture contract a standard token allowance on it. When the keeper spots an outside transaction, it pulls the round-up from your USDG, up to your cap, straight into your vault. Simplest path, live today.
 - **From WETH.** For people who mostly hold ETH. You grant an allowance on your wrapped ETH, and the Capture contract swaps exactly the round-up's worth into USDG on one fixed pool, refusing any price worse than the pool's recent average plus a small margin.

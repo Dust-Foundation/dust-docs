@@ -1,6 +1,6 @@
 # How to use Dust
 
-This is the long version of [Getting started](getting-started.md): every screen, every transaction you will be asked to sign, what each one does onchain, and what to expect afterwards. It describes Dust on Robinhood Chain, which is where Dust lives. If you are on Solana, the flow is close but the details differ, and [Also on Solana](solana.md) covers them. On Arc the flow is this one exactly, with two differences: the basket holds cirBTC rather than Stock Tokens for now, and Capture Everywhere is funded from USDC only. [Also on Arc](arc.md) has the specifics.
+This is the long version of [Getting started](getting-started.md): every screen, every transaction you will be asked to sign, what each one does onchain, and what to expect afterwards. It describes Dust on Robinhood Chain, which is where Dust lives. If you are on Solana, the flow is close but the details differ, and [Also on Solana](solana.md) covers them. On Arc the flow is this one exactly, with two differences: the basket holds cirBTC rather than Stock Tokens for now, and round-ups are paid from USDC only. [Also on Arc](arc.md) has the specifics.
 
 Nothing here requires trusting us with your money. Every step is a transaction from your own wallet, and every permission you grant is capped and revocable. If a step ever asks you to send funds to an address to "activate" something, close the tab. That is not Dust.
 
@@ -26,78 +26,83 @@ Dust is not yet open to the public. The steps below describe the app as built, a
 
 ## Step 1: connect
 
-Open the app at https://app.roundupdust.com. That is the only official address; bookmark it rather than following links from posts or messages. The chain switcher at the top right shows Robinhood first; that is the default, so you should not have to touch it. Click **Connect wallet** and approve the connection in your wallet.
+Open the app at https://app.roundupdust.com. That is the only official address; bookmark it rather than following links from posts or messages. The network pill at the top right says Robinhood; that is the default, so you should not have to touch it. Tap **Connect wallet** and pick your wallet. On a phone without a wallet extension, pick **WalletConnect** and scan the code with your wallet app, or open the page from inside the wallet app's browser.
 
-If your wallet is on another network, the app shows a **Switch to Robinhood Chain** button. Click it and approve the switch. Until you do, the app cannot read your balances, so nothing else appears.
+If your wallet is on another network, the app shows a **Switch to Robinhood Chain** button. Tap it and approve the switch. Until you do, the app cannot read your balances, so nothing else appears.
 
 Nothing has been signed onchain yet. Connecting only tells the app which address to read.
 
-## Step 2: build your basket
+## Step 2: what your change buys
 
-The first thing Dust asks is what your spare change should buy. This is yours to decide. Nobody at Dust picks stocks for you, and the contract that does the buying is written so that nobody at Dust can change your choice later.
+A new wallet gets two setup screens. The first asks what your spare change should buy. This is yours to decide. Nobody at Dust picks stocks for you, and the contract that does the buying is written so that nobody at Dust can change your choice later.
 
-You see the menu of Stock Tokens available on Robinhood Chain. Twenty today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX, MSTR, MU, COST, LLY, CRCL and HIMS. Each row has a percentage. Set them any way you like as long as they add up to 100 percent. **Split evenly** gives every token on the menu the same share. You can leave a token at zero if you do not want it.
+Pick a mix or build your own:
 
-Click **Save basket**. Your wallet asks you to sign one transaction. It records your basket in the DustSweeper contract under your address, and it is the only way a basket is ever set. It costs a fraction of a cent in ETH.
+- **The market**: half SPY, half QQQ.
+- **Big tech**: NVDA, AAPL, MSFT, GOOGL, AMZN and META, evenly.
+- **A bit of everything**: every Stock Token on the menu, evenly. Twenty today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX, MSTR, MU, COST, LLY, CRCL and HIMS.
+- **Build my own**: add the stocks you want with **Add a stock** and drag each slider. The others adjust so the total is always 100 percent. You never have to do the arithmetic.
 
-You can come back and change the basket any time. A change applies to future sweeps only. Stock Tokens you already hold in your vault stay exactly as they are.
+Tap **Save and continue**. Your wallet asks you to sign one transaction. It records your basket in the DustSweeper contract under your address, and it is the only way a basket is ever set. It costs a fraction of a cent in ETH.
 
-## Step 3: round up a purchase inside Dust
+You can change the basket any time from the **Basket** tab. A change applies to future buys only. Stock Tokens you already hold in your vault stay exactly as they are.
 
-With a basket saved, the main screen appears: your vault at the top, then **Buy Stock Tokens**, then **Withdraw**, then **Capture everywhere**.
+## Step 3: let Dust collect your change
 
-The **Buy Stock Tokens** panel is a swap with a round-up attached. You choose which Stock Token to buy under **I want to buy**, and how much USDG to spend under **Paying**. Then two choices that only affect the change:
+The second setup screen turns on round-ups. Instead of rounding up only what you buy inside the app, the keeper watches your wallet's activity on Robinhood Chain and rounds up what you spend anywhere else: a swap on a DEX, a purchase, an ETH transfer. You stay in control through two limits that live onchain, in a contract with no owner and no pause switch.
 
-- **Round up to nearest**: $1 or $5. Spending $61.30 rounded to the nearest dollar leaves $0.70 of change; rounded to the nearest $5, $3.70.
-- **Invest extra**: 1x, 2x, or 10x. The multiplier applies to the change, not the purchase. At 10x, that $0.70 becomes $7.00.
+**Weekly limit.** Pick $5, $10 or $25 a week, or type your own, and tap **Set**. One transaction. This is the most Dust can ever collect in any seven-day window, across every source combined. A limit of zero means off.
 
-The panel shows **You receive about** (the Stock Tokens you get, quoted from the live Uniswap pool), the change it will invest for you, and **Total from your wallet**, which is the purchase plus the change. A **Max slippage** setting protects the purchase leg. If the amount already ends on a whole dollar, the panel says so and there is no change this time.
+**Paid from.** The app looks at what your wallet holds and leads with the simplest option:
 
-Click the buy button and sign. If it is your first purchase, your wallet first asks you to approve USDG spending for the DustRouter contract; that approval is for the total shown, not unlimited. Then one transaction does two things: it swaps your USDG for the Stock Token, which lands directly in your wallet, and it moves the change into your vault as accrued USDG, credited to your address.
+- If you hold USDG, it asks you to **Allow** Dust to use up to your weekly limit of USDG for round-ups. A standard token permission, visible and removable in your wallet like any other.
+- If you hold ETH and no USDG, it asks you to **Set aside** a little ETH. The ETH sits in the DustCapture contract credited to your address, and round-ups are drawn from it under a price guard: the contract refuses any price worse than the pool's ten-minute average plus 2 percent. **Take back** returns it to your wallet in one transaction, in every state.
 
-The purchase is yours immediately. The change waits in the vault for the sweep, covered in step 5.
+**Other ways to pay** folds out the rest: allowing WETH, or adding a second source as a fallback. Round-ups come out of USDG first, then WETH, then the ETH you set aside. The weekly limit covers all of them together.
 
-## Step 4: turn on Capture everywhere
-
-This is the part that makes Dust work in the background. Instead of rounding up only what you buy inside the app, the keeper watches your wallet's activity on Robinhood Chain and rounds up what you spend anywhere else: a swap on a DEX, a purchase, an ETH transfer. You stay in control through two limits that live onchain, in a contract with no owner and no pause switch.
-
-**Set your weekly cap.** Under **Capture everywhere**, enter a dollar amount and click **Set weekly cap**. One transaction. This is the most the keeper can ever pull in any seven-day window, across every funding source combined. Start small, $5 or $10, and raise it later with **Update cap** if you want. A cap of zero means off.
-
-**Fund your round-ups.** A cap alone does nothing; the status reads "Cap set, nothing funded yet." Pick at least one source. You can use more than one, and the keeper tries them in this order:
-
-1. **USDG allowance.** Approve the DustCapture contract to spend USDG from your wallet, up to an amount you choose. Standard token approval, visible and revocable in your wallet like any other. Round-ups are pulled from your USDG balance.
-2. **WETH allowance.** For people who hold ETH rather than dollars. Click **Approve WETH**; the app suggests an amount worth about 1.25 times your weekly cap at the current price, and you can change it. When a round-up is due, the contract takes exactly the round-up's worth of WETH from your wallet and swaps it into USDG on the WETH/USDG pool, straight into your vault. The contract refuses any price worse than the pool's ten-minute average plus 2 percent, so nobody, including us, can run that swap at a bad price.
-3. **ETH float.** For people who hold plain ETH and do not want to wrap it. Enter an amount and click **Deposit ETH**. The ETH sits in the DustCapture contract credited to your address, and the keeper draws round-ups from it under the same price guard. It is yours the whole time: **Withdraw all** returns it to your wallet in one transaction, in every state, cap or no cap. The app leaves a little ETH in your wallet for gas when you deposit.
-
-The panel shows your **Weekly cap**, **Left this week**, your **ETH float** balance, and each allowance.
+You can **Skip for now** and turn round-ups on later from the **Round-ups** tab. Until you do, nothing is collected and Home says so.
 
 **What counts as a spend.** The keeper reads your transactions and asks what you gave up: USDG that left your wallet, or ETH that left your wallet (plain ETH and WETH are counted as one asset, so wrapping or unwrapping is never a spend). Within one transaction, each asset is netted against itself, so a swap that routes through several pools counts once, and a refund cancels out. Selling something for USDG is not a spend. Transactions with Dust's own contracts never count. ETH spends are valued in dollars at the pool price at the time.
 
-**How the round-up is computed.** Each spend is rounded up to the next whole dollar. Spend $18.40 and the round-up is $0.60. Spend 0.02 ETH worth $50.15 and the round-up is $0.85. The keeper adds these up and pulls them, usually within a minute of the transaction, bounded by your cap and by what your funding sources can cover.
+**How the round-up is computed.** Each spend is rounded up to the next whole dollar. Spend $18.40 and the round-up is $0.60. Spend 0.02 ETH worth $50.15 and the round-up is $0.85. The keeper adds these up and collects them, usually within a minute of the transaction, bounded by your limit and by what your sources can cover.
 
-**When it cannot pull.** If your weekly cap is used up, or no funding source has enough, the round-up is skipped. Dust does not keep a tab. There is never a balance owed, and nothing catches up later without your say.
+**When it cannot collect.** If your weekly limit is used up, or no source has enough, the round-up is skipped. Dust does not keep a tab. There is never a balance owed, and nothing catches up later without your say.
 
-**Turning it off.** **Turn off capture everywhere** sets your cap to zero in one transaction. The app then offers to revoke each allowance and withdraw your float, each as its own transaction, so you can leave nothing granted. You can also revoke the allowances from your wallet's own approvals screen without opening Dust.
+**Turning it off.** The switch at the top of the **Round-ups** tab, or **Turn round-ups off** at the bottom, sets your limit to zero in one transaction. Whatever you allowed or set aside stays put until you remove it, each as its own transaction, so you can leave nothing granted. You can also remove the permissions from your wallet's own approvals screen without opening Dust.
 
-## Step 5: the sweep
+## Step 4: Home
 
-Change collects in your vault as accrued USDG. On a schedule, the keeper sweeps it: it takes your accrued USDG and buys your basket with it, in your weights, from the Uniswap pools on Robinhood Chain. Very small amounts may wait until they add up to a sweep-sized sum.
+After setup, the app has four tabs: **Home**, **Basket**, **Round-ups** and **More**. On a phone they sit along the bottom of the screen.
 
-Three things to know about a sweep:
+Home shows the one number that matters, what your spare change is worth today, with how much change went in and the difference. Under it, two lines tell you whether round-ups are on and how much of this week's limit is left, and what your basket buys. Tap either line to change it.
 
-- **The fee is taken here and only here.** Dust charges 1 percent of the amount swept. Nothing on purchases, nothing on withdrawals, nothing on balances. The fee is capped at 5 percent in the contract code, so it can never quietly become something else. [Fees](fees.md) has the detail.
-- **It is deterministic.** The same accrued amount and the same basket give the same buys every time. The keeper supplies a minimum acceptable price per leg derived from the pool's recent average, and the contract rejects any fill below it.
-- **A bad leg never breaks the sweep.** If a Stock Token is paused by its issuer, or its pool is too thin, that leg is skipped and its share of the USDG goes back to your accrued balance. The other legs still buy.
+**Buy a stock** opens a small panel for buying a Stock Token with USDG inside the app, with a round-up attached. Choose the stock and how much to pay. The panel shows what you receive, quoted from the live pool, the change that goes into your basket, and the total from your wallet. **Options** folds out the details most people never touch: round up to the nearest $1 or $5, invest extra (1x, 2x or 10x the change), and price protection, which cancels the buy if the price moves more than the chosen percentage before it lands. If it is your first purchase, your wallet first asks you to approve USDG spending for the DustRouter contract; that approval is for the total shown, not unlimited.
 
-After a sweep, your vault shows the Stock Tokens you now hold, with your cost basis, which is the spare change that went in. That is the number to watch over months, not days.
+**Invest now** appears when change is waiting in your vault. It does what the keeper does on its own schedule, described in step 5, signed by you instead.
 
-## Step 6: your vault
+**What you hold** lists each Stock Token in your vault with your share count. **Recent** is your last few round-ups and buys, in plain sentences, each with a link to the transaction.
 
-**Your vault** at the top of the screen lists each Stock Token you hold and the USDG waiting to be swept. Everything in it is credited to your address in the DustVault contract, a per-user ledger with no pooled shares and no owner power over balances.
+## Step 5: investing the change
 
-**Withdraw** gives you two kinds of buttons. Withdraw a Stock Token, and the tokens move from the vault to your wallet, in kind. You then hold them like any other token on Robinhood Chain and can sell them wherever they trade. Withdraw your accrued USDG, and the unswept change comes back to your wallet as USDG. Both work at any time. There is no lockup, no pause on withdrawals, and no one who can freeze your balance. The one thing outside our control is a Stock Token the issuer has paused; an in-kind withdrawal of that token waits until they unpause it, and your other holdings are unaffected. [Risks and disclosures](risks-and-disclosures.md) covers this.
+Change collects in your vault as USDG. On a schedule, the keeper invests it: it takes your waiting USDG and buys your basket with it, in your weights, from the Uniswap pools on Robinhood Chain. Very small amounts may wait until they add up.
 
-Your ETH float, if you deposited one, is withdrawn from the **Capture everywhere** panel, not here.
+Three things to know:
+
+- **The fee is taken here and only here.** Dust charges 1 percent of the amount invested. Nothing on purchases, nothing on withdrawals, nothing on balances. The fee is capped at 5 percent in the contract code, so it can never quietly become something else. [Fees](fees.md) has the detail.
+- **It is deterministic.** The same amount and the same basket give the same buys every time. The keeper supplies a minimum acceptable price per stock derived from the pool's recent average, and the contract rejects any fill below it.
+- **A bad leg never breaks it.** If a Stock Token is paused by its issuer, or its pool is too thin, that stock is skipped and its share of the USDG stays in your vault. The others still buy.
+
+Afterwards, Home shows the Stock Tokens you now hold, valued at today's prices, against the spare change that went in. That is the number to watch over months, not days.
+
+## Step 6: More
+
+Everything occasionally needed lives under **More**.
+
+**Withdraw** moves a Stock Token from the vault to your wallet, in kind, or returns change that has not been invested yet as USDG. Both work at any time. There is no lockup, no pause on withdrawals, and no one who can freeze your balance. The one thing outside our control is a Stock Token the issuer has paused; an in-kind withdrawal of that token waits until they unpause it, and your other holdings are unaffected. [Risks and disclosures](risks-and-disclosures.md) covers this. ETH you set aside is taken back from the **Round-ups** tab.
+
+**Stop investing my change** clears your basket onchain. Nothing is invested until you save a new one. What is in your vault stays yours, and round-ups keep being collected unless you turn them off too.
+
+More also holds your share card, your full activity list, the network picker, the Race to Roundup card while the race runs, and links to these docs.
 
 ## What it costs
 
@@ -109,14 +114,14 @@ Your ETH float, if you deposited one, is withdrawn from the **Capture everywhere
 
 **The app shows nothing after connecting.** Your wallet is on another network. Use **Switch to Robinhood Chain**.
 
-**A round-up did not appear after an outside transaction.** Give it two minutes. Then check, in order: is your weekly cap set above zero, is anything funded, is there room left this week, and was the transaction actually a spend (selling for USDG, or wrapping ETH, is not). If the price of ETH moved more than 2 percent against the ten-minute average in that moment, a WETH or float pull is postponed until the average catches up.
+**A round-up did not appear after an outside transaction.** Give it two minutes. Then check, in order: are round-ups on, is anything allowed or set aside, is there room left this week, and was the transaction actually a spend (selling for USDG, or wrapping ETH, is not). If the price of ETH moved more than 2 percent against the ten-minute average in that moment, a WETH or float pull is postponed until the average catches up.
 
-**Accrued USDG is sitting there without a sweep.** Small amounts wait until they add up. If a Stock Token in your basket was paused by its issuer, its leg is skipped and that share returns to accrued, so you may see USDG reappear after a sweep. That is by design.
+**Change is sitting there without being invested.** Small amounts wait until they add up, or tap **Invest now** on Home. If a Stock Token in your basket was paused by its issuer, that stock is skipped and its share stays as waiting change. That is by design.
 
-**You want everything out.** Turn off capture (cap to zero), revoke allowances, **Withdraw all** on the float, then withdraw each Stock Token and your accrued USDG. Five minutes, all from your own wallet, no request to us needed.
+**You want everything out.** Turn round-ups off, remove what you allowed, take back any ETH you set aside, then withdraw each Stock Token and your waiting change under More. Five minutes, all from your own wallet, no request to us needed.
 
 **You want to check what you granted.** Open your wallet's token approvals view for Robinhood Chain. Dust appears as approvals to the DustRouter (purchases) and DustCapture (round-ups) contracts, each capped at the amount you set. The addresses are listed in [Security](security.md).
 
 ## What Dust can never do
 
-Move funds anywhere except into your own vault position. Pull more than your weekly cap. Change your basket. Charge more than the fee cap in the code. Freeze or redirect a withdrawal. Take custody of your keys. These are not policies. They are what the contracts allow and do not allow, and you can read them onchain.
+Move funds anywhere except into your own vault position. Collect more than your weekly limit. Change your basket. Charge more than the fee cap in the code. Freeze or redirect a withdrawal. Take custody of your keys. These are not policies. They are what the contracts allow and do not allow, and you can read them onchain.
