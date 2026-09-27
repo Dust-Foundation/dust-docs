@@ -49,7 +49,7 @@ Neither is available on Robinhood Chain yet. Nothing here is listed until it has
 
 <summary>Adding money on a schedule</summary>
 
-Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Round-ups** tab has **Add on a schedule**: an amount, how often (daily, weekly, every two weeks, monthly) and a first date. Each deposit buys your basket at whatever weights it has on the day.
+Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Basket** tab has **Add on a schedule** under your basket: an amount, how often (daily, weekly, every two weeks, monthly) and a first date. Each deposit buys your basket at whatever weights it has on the day.
 
 The schedule is a signed instruction, not a new permission. Every deposit goes through the same contract path as a round-up and counts against the same weekly limit you set on-chain, so Dust can never take more than that limit whatever the schedule says. A deposit the wallet cannot cover is skipped with a reason, never retried and never partially filled. Pause, skip the next one, edit or cancel with a signature. [How to use Dust](how-to-use.md) has the step by step.
 

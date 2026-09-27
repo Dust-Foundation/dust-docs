@@ -74,7 +74,7 @@ You can **Skip for now** and turn round-ups on later from the **Round-ups** tab.
 
 ### Adding money on a schedule
 
-Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Round-ups** tab has **Add on a schedule**: pick an amount ($10, $25, $50 or your own), how often (daily, weekly, every two weeks, monthly) and the first date. Saving it is a signature, not a transaction.
+Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Basket** tab has **Add on a schedule** under your basket: pick an amount ($10, $25, $50 or your own), how often (daily, weekly, every two weeks, monthly) and the first date. Saving it is a signature, not a transaction.
 
 On each due date the keeper takes that amount of USDG from your wallet into your vault, through exactly the same contract path and under exactly the same weekly limit as round-ups. If the deposit plus your round-ups would not fit under the limit, the app asks you to raise the limit first, one transaction, before it lets you save the schedule. Dust never gains a second permission for this. The weekly limit and your USDG allowance are the whole of it, and both are yours to change or remove.
 
