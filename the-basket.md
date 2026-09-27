@@ -47,6 +47,16 @@ Neither is available on Robinhood Chain yet. Nothing here is listed until it has
 
 <details>
 
+<summary>Coming next: a blue-chip crypto basket</summary>
+
+The next thing we build is a second kind of basket: the five largest crypto assets, held the same way your stocks are. Pick it on its own or alongside your Stock Tokens, set the weights, and round-ups buy it under exactly the same rules: canonical pools only, a minimum price the contract enforces on every leg, and everything sitting in a vault position that belongs to you.
+
+It is not built yet, and we are not putting a date on it. The list of five, the pools they trade in on Robinhood Chain, and the disclosures will be published here before anything is listed. Like everything else on this page, it will be something you choose, never something round-ups go into on their own.
+
+</details>
+
+<details>
+
 <summary>Adding money on a schedule</summary>
 
 Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Basket** tab has **Add on a schedule** under your basket: an amount, how often (daily, weekly, every two weeks, monthly) and a first date. Each deposit buys your basket at whatever weights it has on the day.
