@@ -24,6 +24,8 @@ Automation needs authority, so we ask for the smallest one that works. Round-ups
 | Spend up to the weekly cap you set | Exceed that cap, ever, for any reason |
 | Act until you revoke it | Survive revocation |
 
+Scheduled deposits, where you ask Dust to add a fixed amount on a schedule, use this same permission and nothing more. Each deposit goes through the same contract path as a round-up and counts against the same weekly cap, so a schedule can never take more than the cap you set, and turning the cap to zero stops both. The schedule itself is a signed instruction, not a transaction, and you can pause or cancel it with another signature.
+
 These limits are not policies we follow. They are enforced by the Capture contract's code and by standard token allowances your wallet controls. If our keeper tried to exceed them, the transaction would fail on chain the same way a wrong password fails. This is worth sitting with, because it is the entire trust model. You are not trusting Dust's honesty. You are trusting a rule the chain enforces, which you can read and revoke.
 
 ## Three ways to fund Capture Everywhere

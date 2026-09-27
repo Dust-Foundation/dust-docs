@@ -43,6 +43,8 @@ Pick a mix or build your own:
 - **A bit of everything**: every Stock Token on the menu, evenly. Twenty today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX, MSTR, MU, COST, LLY, CRCL and HIMS.
 - **Build my own**: add the stocks you want with **Add a stock** and drag each slider. The others adjust so the total is always 100 percent. You never have to do the arithmetic.
 
+The menu today is Stock Tokens only. When other kinds of assets are listed they appear in their own sections of **Add a stock**: real-world assets, where the token represents exposure to something like an apartment and the app says so plainly, and microcaps, which you pick yourself and which the app caps at 10 percent of a basket. Round-ups are never routed into either automatically.
+
 Tap **Save and continue**. Your wallet asks you to sign one transaction. It records your basket in the DustSweeper contract under your address, and it is the only way a basket is ever set. It costs a fraction of a cent in ETH.
 
 You can change the basket any time from the **Basket** tab. A change applies to future buys only. Stock Tokens you already hold in your vault stay exactly as they are.
@@ -70,11 +72,21 @@ You can **Skip for now** and turn round-ups on later from the **Round-ups** tab.
 
 **Turning it off.** The switch at the top of the **Round-ups** tab, or **Turn round-ups off** at the bottom, sets your limit to zero in one transaction. Whatever you allowed or set aside stays put until you remove it, each as its own transaction, so you can leave nothing granted. You can also remove the permissions from your wallet's own approvals screen without opening Dust.
 
+### Adding money on a schedule
+
+Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Round-ups** tab has **Add on a schedule**: pick an amount ($10, $25, $50 or your own), how often (daily, weekly, every two weeks, monthly) and the first date. Saving it is a signature, not a transaction.
+
+On each due date the keeper takes that amount of USDG from your wallet into your vault, through exactly the same contract path and under exactly the same weekly limit as round-ups. If the deposit plus your round-ups would not fit under the limit, the app asks you to raise the limit first, one transaction, before it lets you save the schedule. Dust never gains a second permission for this. The weekly limit and your USDG allowance are the whole of it, and both are yours to change or remove.
+
+A deposit that cannot be covered is skipped, not retried: not enough USDG in the wallet, an allowance below the limit, or no room left under the limit that week. The card shows each skip with its reason. There are no partial deposits and nothing is caught up later. The money buys your basket at whatever weights it has at the time.
+
+**Pause**, **Skip next**, **Edit** and **Cancel deposits** are each one tap plus a signature. Home shows the schedule next to your spare change with the next date and what it adds up to over a year.
+
 ## Step 4: Home
 
 After setup, the app has four tabs: **Home**, **Basket**, **Round-ups** and **More**. On a phone they sit along the bottom of the screen.
 
-Home shows the one number that matters, what your spare change is worth today, with how much change went in and the difference. Under it, two lines tell you whether round-ups are on and how much of this week's limit is left, and what your basket buys. Tap either line to change it.
+Home shows the one number that matters, what your spare change is worth today, with how much change went in and the difference. Under it, status lines tell you whether round-ups are on and how much of this week's limit is left, what your basket buys, and your scheduled deposit if you have one. Tap any line to change it.
 
 **Buy a stock** opens a small panel for buying a Stock Token with USDG inside the app, with a round-up attached. Choose the stock and how much to pay. The panel shows what you receive, quoted from the live pool, the change that goes into your basket, and the total from your wallet. **Options** folds out the details most people never touch: round up to the nearest $1 or $5, invest extra (1x, 2x or 10x the change), and price protection, which cancels the buy if the price moves more than the chosen percentage before it lands. If it is your first purchase, your wallet first asks you to approve USDG spending for the DustRouter contract; that approval is for the total shown, not unlimited.
 
