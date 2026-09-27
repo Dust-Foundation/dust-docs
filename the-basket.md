@@ -15,7 +15,45 @@ Now the honest part, and please read it: **a Stock Token is not a share.** It is
 
 ## You pick the basket
 
-Dust does not hand you a fixed list. You compose your own basket from the Stock Tokens Dust has listed onchain, and you set the weights: an even split across five names, or sixty percent in one and forty in another, whatever you want. The launch menu is TSLA, NVDA, AAPL, AMZN, and SPY, chosen for being the largest and most liquid names available. You can change your basket any time, and the change applies to future round-ups.
+Dust does not hand you a fixed list. You compose your own basket from the Stock Tokens Dust has listed onchain, and you set the weights: an even split, or sixty percent in one and forty in another, whatever you want. The menu is twenty names today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX, MSTR, MU, COST, LLY, CRCL and HIMS, each chosen for having a deep, verified USDG pool. You can change your basket any time, and the change applies to future round-ups.
+
+<details>
+
+<summary>Presets, or build your own</summary>
+
+The Basket tab opens with three ready-made mixes and a custom option.
+
+* **The market**: half SPY, half QQQ.
+* **Big tech**: NVDA, AAPL, MSFT, GOOGL, AMZN and META, evenly.
+* **A bit of everything**: every Stock Token on the menu, evenly.
+* **Build my own**: add the names you want and drag a slider for each. The other sliders adjust so the total is always 100 percent.
+
+Saving any of them is one transaction that records your weights in the sweeper contract under your address. Presets are only a starting point; the contract stores weights, not a preset name, so you can tweak one and save it as your own.
+
+</details>
+
+<details>
+
+<summary>Other kinds of assets: real-world assets and microcaps</summary>
+
+Today the menu is Stock Tokens only. The app is built for two more kinds, which appear in their own sections of **Add a stock** once a qualifying token is listed:
+
+* **Real-world assets.** A token that represents exposure to something like an apartment, issued by a third party. The app says plainly that you hold the token, not the deed, and the issuer's rules apply the same way a Stock Token issuer's do. We diligence the tokenization provider before listing anything, because you inherit their risk.
+* **Microcaps.** Small, thinly traded tokens. Only ones you add yourself, and the app caps them at 10 percent of a basket. Round-ups are never routed into microcaps automatically, and Dust does not curate a "degen" list. The point of Dust is spare change into stable assets; a small slice you choose is the most this will ever be.
+
+Neither is available on Robinhood Chain yet. Nothing here is listed until it has a deep, canonical pool, the same bar every Stock Token clears.
+
+</details>
+
+<details>
+
+<summary>Adding money on a schedule</summary>
+
+Round-ups only add what your trading produces. If you want a steady amount going in as well, the **Round-ups** tab has **Add on a schedule**: an amount, how often (daily, weekly, every two weeks, monthly) and a first date. Each deposit buys your basket at whatever weights it has on the day.
+
+The schedule is a signed instruction, not a new permission. Every deposit goes through the same contract path as a round-up and counts against the same weekly limit you set on-chain, so Dust can never take more than that limit whatever the schedule says. A deposit the wallet cannot cover is skipped with a reason, never retried and never partially filled. Pause, skip the next one, edit or cancel with a signature. [How to use Dust](how-to-use.md) has the step by step.
+
+</details>
 
 The listed menu lives onchain, in the sweeper contract, and the app reads it from there. That matters for one specific reason: it means what you can buy is a verifiable list, not a claim in an interface. Lookalike tokens with famous names exist on every chain. Your basket can only ever hold token contracts Dust has actually listed, which are the issuer's genuine Stock Token contracts, checked for real liquidity before listing.
 
