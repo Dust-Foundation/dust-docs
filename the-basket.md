@@ -47,11 +47,13 @@ Neither is available on Robinhood Chain yet. Nothing here is listed until it has
 
 <details>
 
-<summary>Coming next: a blue-chip crypto basket</summary>
+<summary>Blue-chip crypto: Bitcoin and Ether</summary>
 
-The next thing we build is a second kind of basket: the five largest crypto assets, held the same way your stocks are. Pick it on its own or alongside your Stock Tokens, set the weights, and round-ups buy it under exactly the same rules: canonical pools only, a minimum price the contract enforces on every leg, and everything sitting in a vault position that belongs to you.
+The menu also carries the two largest crypto assets, held the same way your stocks are. Pick the **Blue-chip crypto** preset, half Bitcoin and half Ether, or add either to a stock basket with your own weights. Round-ups buy them under exactly the same rules: canonical pools only, a minimum price the contract enforces on every leg, and everything sitting in a vault position that belongs to you.
 
-It is not built yet, and we are not putting a date on it. The list of five, the pools they trade in on Robinhood Chain, and the disclosures will be published here before anything is listed. Like everything else on this page, it will be something you choose, never something round-ups go into on their own.
+What the tokens are, plainly. **Bitcoin** is Coinbase Wrapped BTC (cbBTC), a token Coinbase issues one to one against bitcoin it holds; your claim is on Coinbase's reserve, not on the Bitcoin network. **Ether** is wrapped ETH, the standard token form of the chain's own gas asset, redeemable for ETH one to one at any time by anyone. On Robinhood Chain the Ether pool is very deep; the Bitcoin pool is real but small at the time of listing, which matters little for round-up sized buys and is why every leg is still price-checked by the contract.
+
+We wanted five. On Robinhood Chain and on Base, only these two have pools deep enough to clear the bar every Stock Token clears. Others are added the day their pools do, and announced here first.
 
 </details>
 

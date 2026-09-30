@@ -41,7 +41,8 @@ Pick a mix or build your own:
 - **The market**: half SPY, half QQQ.
 - **Big tech**: NVDA, AAPL, MSFT, GOOGL, AMZN and META, evenly.
 - **A bit of everything**: every Stock Token on the menu, evenly. Twenty today: TSLA, NVDA, AAPL, AMZN, SPY, MSFT, GOOGL, META, NFLX, AMD, PLTR, QQQ, GLD, SPCX, MSTR, MU, COST, LLY, CRCL and HIMS.
-- **Build my own**: add the stocks you want with **Add a stock** and drag each slider. The others adjust so the total is always 100 percent. You never have to do the arithmetic.
+- **Blue-chip crypto**: half Bitcoin (Coinbase Wrapped BTC), half Ether.
+- **Build my own**: add the stocks you want with **Add an asset** and drag each slider. The others adjust so the total is always 100 percent. You never have to do the arithmetic.
 
 The menu today is Stock Tokens only. When other kinds of assets are listed they appear in their own sections of **Add a stock**: real-world assets, where the token represents exposure to something like an apartment and the app says so plainly, and microcaps, which you pick yourself and which the app caps at 10 percent of a basket. Round-ups are never routed into either automatically.
 
