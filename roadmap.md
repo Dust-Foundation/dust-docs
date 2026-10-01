@@ -31,7 +31,7 @@ September 23, 2026: the app was rebuilt around four tabs, Home, Basket, Round-up
 
 A big month. This is what we are shipping, in order. Weeks are the order things happen in, not promises of a date; dates may shift, and we would rather ship it right than ship it on a Tuesday. An AMA every Friday and a recap post every week.
 
-**Week 1**
+### Week 1
 
 * This roadmap.
 * Recurring deposits: live since September 27. Set a weekly or monthly amount on top of your round-ups.
@@ -39,14 +39,14 @@ A big month. This is what we are shipping, in order. Weeks are the order things 
 * RWA basket teaser: your spare change into real-world assets.
 * Friday AMA: full roadmap walkthrough.
 
-**Week 2**
+### Week 2
 
 * First new integration of the month goes live.
 * Mobile app beta opens. $DUST holders get first access.
 * Buyback and burn dashboard: revenue in, tokens bought back, tokens burned, each with a transaction link.
 * Friday AMA with the integration partner.
 
-**Week 3**
+### Week 3
 
 * Second integration of the month goes live.
 * Holder multipliers: the more $DUST you hold, the more you round up.
@@ -54,14 +54,14 @@ A big month. This is what we are shipping, in order. Weeks are the order things 
 * More on how the RWA basket works.
 * Friday AMA: open floor. Bring the hard questions.
 
-**Week 4**
+### Week 4
 
 * Mobile app launches publicly.
 * First public burn, announced with the transaction hash.
 * Final look at the RWA basket before launch.
 * Friday AMA: live walkthrough of the app.
 
-**Week 5**
+### Week 5
 
 * RWA basket goes live.
 * Monthly revenue post: real numbers, buybacks and burns to date.
