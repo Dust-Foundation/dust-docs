@@ -43,7 +43,7 @@ A big month. This is what we are shipping, in order. Weeks are the order things 
 
 * First new integration of the month goes live.
 * Mobile app beta opens. $DUST holders get first access.
-* Buyback and burn dashboard: revenue in, tokens bought back, tokens burned, each with a transaction link.
+* Buyback and burn dashboard: live since October 13 on the app's welcome screen. Dollars spent buying $DUST back and the share of supply burned, read from the treasury wallet on-chain, each with a transaction link.
 * Friday AMA with the integration partner.
 
 ### Week 3
