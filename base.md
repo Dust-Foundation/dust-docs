@@ -47,3 +47,9 @@ The contracts are deployed to Base mainnet, the keeper runs on production infras
 ## Four chains, one product
 
 Robinhood Chain for Robinhood's Stock Tokens, Base for Coinbase's tokenized stocks through Aerodrome, Solana for xStocks, Arc for dollar-native spending. Switching is a toggle in the app, and the rules are the same everywhere: pick a basket, let your spare change buy it, withdraw whenever you want, and nobody but you can move your funds.
+
+## Dust in the Base App
+
+Dust runs as a mini app inside the Base App. Open it there and your Base Account is connected the moment it loads: no extension, no QR code, no seed phrase to manage. Everything on this page applies unchanged, because it is the same app and the same contracts. Base Account is a smart wallet, so saving a basket, allowing round-ups and signing a scheduled deposit all work as they do with any other wallet.
+
+The Base App only reaches Base, so inside it Dust shows the Base menu: Coinbase's tokenized stocks, Bitcoin and Ether through Aerodrome. Robinhood Chain and Arc stay on the web app.

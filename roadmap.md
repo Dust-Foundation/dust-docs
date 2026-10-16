@@ -42,7 +42,7 @@ A big month. This is what we are shipping, in order. Weeks are the order things 
 ### Week 2
 
 * First new integration of the month goes live.
-* Mobile app beta opens. $DUST holders get first access.
+* Mobile app beta: Dust runs inside the Base App as a mini app, with the Base Account connected on open. Live October 16, pending the app's listing on Base.dev.
 * Buyback and burn dashboard: live since October 13 on the app's welcome screen. Dollars spent buying $DUST back and the share of supply burned, read from the treasury wallet on-chain, each with a transaction link.
 * Friday AMA with the integration partner.
 
