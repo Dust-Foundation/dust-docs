@@ -34,15 +34,21 @@ Saving any of them is one transaction that records your weights in the sweeper c
 
 <details>
 
-<summary>Other kinds of assets: real-world assets and microcaps</summary>
+<summary>Real-world assets: gold, silver, oil and Treasury bills</summary>
 
-Today the menu is Stock Tokens only. The app is built for two more kinds, which appear in their own sections of **Add a stock** once a qualifying token is listed:
+The menu has a **Real-world assets** section: gold (GLD), silver (SLV), oil (USO) and short-term US Treasury bills (SGOV). Pick the **Real assets** preset, which splits across all four, or add any of them to a basket of your own. They are Stock Tokens like the rest, each tracking a fund that holds the asset: GLD and SLV hold bullion in vaults, USO holds oil futures rather than barrels, SGOV holds bills maturing within three months. You hold a token that follows the fund's price, not the metal, the oil or the bill, and the issuer's pause and blocklist rules apply exactly as they do to any Stock Token.
 
-* **Real-world assets.** A token that represents exposure to something like an apartment, issued by a third party. The app says plainly that you hold the token, not the deed, and the issuer's rules apply the same way a Stock Token issuer's do. We diligence the tokenization provider before listing anything, because you inherit their risk.
+What is not here yet: tokenized property, vehicles and other assets that are not funds. Nothing of that kind exists on Robinhood Chain today with a real pool behind it. When a tokenization provider lists one and it clears the same bar everything else on this page clears, deep canonical pool, verified issuer, plain disclosure, it goes into the same section. We diligence the provider first, because you inherit their risk, and the app will say plainly that you hold a token, not a deed.
+
+</details>
+
+<details>
+
+<summary>Microcaps</summary>
+
 * **Microcaps.** Small, thinly traded tokens. Only ones you add yourself, and the app caps them at 10 percent of a basket. Round-ups are never routed into microcaps automatically, and Dust does not curate a "degen" list. The point of Dust is spare change into stable assets; a small slice you choose is the most this will ever be.
 
-Neither is available on Robinhood Chain yet. Nothing here is listed until it has a deep, canonical pool, the same bar every Stock Token clears.
-
+Not available on Robinhood Chain yet. Nothing here is listed until it has a deep, canonical pool, the same bar every Stock Token clears.
 </details>
 
 <details>
