@@ -63,7 +63,7 @@ A big month. This is what we are shipping, in order. Weeks are the order things 
 
 ### Week 5
 
-* RWA basket goes live.
+* RWA basket: first part live October 15, gold, silver, oil and US Treasury bills as a Real-world assets section with a Real assets preset. Tokenized property and the rest wait on a provider with a real pool on Robinhood Chain.
 * Monthly revenue post: real numbers, buybacks and burns to date.
 * Public metrics dashboard: round-ups, volume and active vaults, updating live.
 * Friday AMA: month recap and what is coming in November.
